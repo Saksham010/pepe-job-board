@@ -1,0 +1,92 @@
+.navContainer{
+    display: flex;
+    /* border: 1px red solid; */
+    justify-content: space-between;
+    align-items: center;
+    color: #519202;
+    padding: 1rem;
+    padding-left: 2.6vw;
+    border-bottom: dotted;
+}
+
+
+.innerNav{
+    display: block;
+    display: flex;
+    /* border:1px green solid; */
+    flex: 1;
+    justify-content:flex-end ;
+    padding-right:2vw ;
+    align-items: center;
+}
+.innerNav .nav-box{
+    padding: 1rem;
+    padding-left: 1vw;
+}
+.innerNav a{
+    text-decoration: none;
+}
+.innerNav span{
+    color:#519202 ;
+    font-size: 1.4em;
+    letter-spacing: -1px;
+}
+.innerNav span:hover{
+    opacity: 0.9;
+}
+.innerNav button{
+    padding: 0.8em;
+    background-color:#17091F ;
+    border:1px #519202 solid;
+    font-family: 'Press Start 2P';
+    color:#519202 ;
+    font-size: 1em;
+    letter-spacing: -1px;
+}
+.innerNav button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+.outerLogo{
+    display: flex;
+    /* border: 1px green solid; */
+    /* width: 40%; */
+    align-items:center;
+    color: #519202;
+    flex:1;
+}
+.outerLogo span{
+    padding-left: 0.8vw;
+    font-size: 2em;
+    letter-spacing: -2px;
+    color: #519202;
+
+
+}
+.outerLogo span:hover, .outerLogo img:hover{
+    opacity: 0.9;
+}
+.outerLogo a{
+    text-decoration: none;
+
+}
+
+.logoContainer{
+    /* border: 1px red solid; */
+    width:13vh;
+
+    padding:1.8vh;
+    color: white;
+}
+
+
+.logoContainer img{
+    width: 100%;
+    height: 10vh;
+
+}
+.logoContainer h1{
+    width: 60%;
+}
