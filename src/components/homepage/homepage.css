@@ -5,6 +5,7 @@
 .job-container{
     margin: auto;
     border: 1px #333546 solid;
+    border-radius: 6px;
     width: 50vw;
     padding: 3vh;
 
@@ -21,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #202231;
+    /* border: 2px #519202 dotted; */
     border-radius:7px;
     
 }
