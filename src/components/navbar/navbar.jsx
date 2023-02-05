@@ -1,18 +1,18 @@
 import "./navbar.css";
 import { Link } from "react-router-dom";
-export default function Navbar(){
-    return(
+export default function Navbar() {
+    return (
         <div className="navContainer">
 
             <div className="outerLogo">
                 <div className="logoContainer">
-                    <Link to='/'>            
+                    <Link to='/'>
                         <img src="pepe3.png"></img>
                     </Link>
 
 
                 </div>
-                <Link to='/'>            
+                <Link to='/'>
                     <span>Pepe Job Board</span>
                 </Link>
             </div>
@@ -24,12 +24,15 @@ export default function Navbar(){
                     <Link to="/"><span>Jobs</span></Link>
                 </div>
                 <div className="nav-box">
-                    <Link to = '/internship'><span>Internship</span></Link>
+                    <Link to='/internship'><span>Internship</span></Link>
 
                 </div>
 
                 <div className="nav-box">
-                    <button>Post Job/Internship</button>
+                    <Link to='/form' >
+                        <button>Post Job/Internship</button>
+                    </Link>
+
 
                 </div>
 

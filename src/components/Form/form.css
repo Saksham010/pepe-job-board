@@ -1,0 +1,190 @@
+.overlay{
+
+    padding-top: 96px;
+    padding-bottom: 96px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.overlay input{
+    padding-left: 8px;
+    border: none;
+}
+
+.inside{
+    max-width: 500px;
+    height: 120px;
+    margin: auto;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.inside1{
+    max-width: 500px;
+    height: 125px;
+    margin: auto;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+}
+
+.position{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+
+.inside2{
+    max-width: 500px;
+    height: 125px;
+    margin: auto;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+}
+.company{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+
+
+
+.inside3{
+    max-width: 500px;
+    height: 125px;
+    margin: auto;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+}
+.salarly{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.inside4{
+    max-width: 500px;
+    height: 125px;
+    margin: auto;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+}
+
+.location{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+
+.inside5{
+    max-width: 500px;
+    height: 125px;
+    margin: auto;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+}
+
+.type{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: #519202;
+    font-family: 'Press Start 2P';
+    font-size: 9.5px;
+    padding-left: 4px;
+}
+.type:focus{
+    outline: none;
+    border:3px #519202 solid;
+}
+.type::placeholder{
+    color: #519202 ;
+    font-family:'Press Start 2P';
+    font-size: 9.5px;
+}
+
+.inside6{
+    max-width: 500px;
+    height: 125px;
+    margin: auto;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 100%;
+    padding-left: 8px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.description:focus{
+   outline: none;
+   border:3px #519202 solid;
+}
+.description::placeholder{
+    color: #519202 ;
+    font-family:'Press Start 2P';
+    font-size: 9.5px;
+ }
+
+
+
+.submit{
+    /* margin: 85px; */
+    padding: 15px 15px;
+    font-family:'Press Start 2P';
+    border-radius: 5px;
+    color: #519202;
+    margin-top: 30px;
+ }
+
+
+ .colour{
+    color: #519202;
+ }
+
+ .overlay input:focus {
+    outline: none;
+    border:3px #519202 solid;
+ }
+ .overlay input::placeholder{
+    color: #519202 ;
+    font-family:'Press Start 2P';
+    font-size: 9.5px;
+ }
