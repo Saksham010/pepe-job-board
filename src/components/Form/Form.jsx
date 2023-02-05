@@ -7,7 +7,7 @@ export default function Form() {
       <form className="overlay">
         <div className="inside">
           <label className="colour">Title</label>
-          <input className="title"
+          <input className="form-title"
             type='text'
             placeholder="Enter Title" />
         </div>
@@ -21,7 +21,7 @@ export default function Form() {
 
         <div className="inside2">
           <label className="colour">Company</label>
-          <input className="company"
+          <input className="form-company"
             type='text'
             placeholder="Your company" />
         </div>
@@ -37,7 +37,7 @@ export default function Form() {
 
         <div className="inside4">
           <label className="colour">Location</label>
-          <input className="location"
+          <input className="form-location"
             type='text'
             placeholder="Your location" />
         </div>

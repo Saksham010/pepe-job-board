@@ -18,7 +18,7 @@
     /* background-color: rgba(0, 0, 0, 0.75); */
 }
 
-.title{
+.form-title{
     display: flex;
     flex-direction: column;
     padding-top: 16px;
@@ -54,7 +54,7 @@
     color: white;
     /* background-color: rgba(0, 0, 0, 0.75); */
 }
-.company{
+.form-company{
     display: flex;
     flex-direction: column;
     padding-top: 16px;
@@ -92,7 +92,7 @@
     /* background-color: rgba(0, 0, 0, 0.75); */
 }
 
-.location{
+.form-location{
     display: flex;
     flex-direction: column;
     padding-top: 16px;
