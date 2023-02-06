@@ -122,7 +122,7 @@ export default function Homepage(){
 
                 {content}
 
-                <Pagination page={activePage} onChange={setPage} total={Math.ceil(getTotalJobs()/5)}/>
+                <Pagination page={activePage} onChange={setPage} total={Math.ceil(getTotalJobs()/5)} color="teal" position="center"/>
             </div>
 
 
