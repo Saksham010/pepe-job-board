@@ -1,3 +1,4 @@
+
 .overlay{
 
     padding-top: 96px;
@@ -8,7 +9,21 @@
 .overlay input{
     padding-left: 8px;
     border: none;
+    background-color: #17091F;
+    outline:none;
+    border: 1px rgb(118, 118, 118) solid;
+    color: #519202;
+    font-family: 'Press Start 2P';
+    font-size: 9.5px;
+
+
 }
+.overlay input:focus{
+    outline: none;
+    border : 1px #519202 solid;
+}
+
+
 
 .inside{
     max-width: 500px;
@@ -124,8 +139,13 @@
     font-family: 'Press Start 2P';
     font-size: 9.5px;
     padding-left: 4px;
+    background-color: #17091F;
+    padding-right: 2rem;
 }
-
+.skill:focus{
+    outline: none;
+    border : 1px #519202 solid;
+}
 .inside4{
     max-width: 500px;
     height: 125px;
@@ -165,10 +185,12 @@
     font-family: 'Press Start 2P';
     font-size: 9.5px;
     padding-left: 4px;
+    background-color:#17091F ;
+
 }
 .type:focus{
     outline: none;
-    border:3px #519202 solid;
+    border:1px #519202 solid;
 }
 .type::placeholder{
     color: #519202 ;
@@ -193,11 +215,17 @@
     padding-left: 8px;
     margin-top: 15px;
     border-radius: 5px;
+    background-color: #17091F;
+    color: #519202;
+    font-family: 'Press Start 2P';
+    font-size: 9.5px;
+
+
 }
 
 .description:focus{
    outline: none;
-   border:3px #519202 solid;
+   border:1px #519202 solid;
 }
 .description::placeholder{
     color: #519202 ;
@@ -211,9 +239,16 @@
     /* margin: 85px; */
     padding: 15px 15px;
     font-family:'Press Start 2P';
-    border-radius: 5px;
     color: #519202;
     margin-top: 30px;
+    background-color: #17091F;
+    cursor: pointer;
+    outline: none;
+    border: 1px rgb(118, 118, 118) solid;
+    
+ }
+ .submit:hover{
+    opacity: 0.9;
  }
 
 
@@ -221,12 +256,9 @@
     color: #519202;
  }
 
- .overlay input:focus {
-    outline: none;
-    border:3px #519202 solid;
- }
  .overlay input::placeholder{
     color: #519202 ;
     font-family:'Press Start 2P';
     font-size: 9.5px;
  }
+

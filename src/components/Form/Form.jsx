@@ -3,127 +3,129 @@ import "./form.css"
 
 
 export default function Form() {
-  const [email, setEmail] = useState('')
+
+  const [userInput, setUserInput] = useState({
+    position:"",
+    company:"",
+    email:"",
+    minimumSalary:"",
+    maximumSalary:"",
+    skills:"",
+    additionalSkills:"",
+    location:"",
+    type:"",
+    description:""
+  })
+  console.log(userInput);
+
+  function updateState(key, value){
+    setUserInput(obj=>{
+      const retObj = {
+        ...obj,
+      }
+      retObj[key] = value;
+      return retObj;
+    })
+    
+  }
+
+  function handleChange(event){
+    // console.log(event.target.name)
+    const type = event.target.name;
+    const data = event.target.value;
+    updateState(type,data);
+  }
 
   function handle() {
-    console.log("name value:" + email)
+    console.log("form submitted");
   }
   return (
     <>
       <form className="overlay" onsubmit={handle} >
-        <div className="inside">
-          <label className="colour">Title</label>
-          <input className="form-title"
-            type='text'
-            placeholder="Enter Title" />
-        </div>
-
         <div className="inside1">
-          <label className="colour">position</label>
-          <input className="position"
+          <label className="colour">Position</label>
+          <input className="position" name="position" value={userInput.position}
             type='text'
-            placeholder="Enter your position" />
+            placeholder="Enter your position" onChange={handleChange} />
         </div>
 
         <div className="inside2">
           <label className="colour">Company</label>
-          <input className="form-company"
+          <input className="form-company" name="company" value={userInput.company} 
             type='text'
-            placeholder="Your company" />
+            placeholder="Your company" onChange={handleChange} />
         </div>
-
-
 
         <div className="inside8">
           <label className="colour">Email</label>
-          <input className="email"
-            type='text'
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+          <input className="email" name="email" value={userInput.email}
+            type='text' 
             required
-            placeholder="Your company" />
+            placeholder="Your company"  onChange={handleChange}/>
         </div>
 
-
-
-
         <div className="inside3">
-          <label className="colour">Minimum Salarly</label>
-          <input className="salarly"
+          <label className="colour">Minimum Salary</label>
+          <input className="salarly" name="minimumSalary" value={userInput.minimumSalary}
             type='text'
-            placeholder="Enter your expected salarly" />
+            placeholder="Enter your expected salary" onChange={handleChange}/>
         </div>
 
-
-
         <div className="inside3">
-          <label className="colour">Maximum Salarly</label>
-          <input className="salarly"
+          <label className="colour">Maximum Salary</label>
+          <input className="salarly" name="maximumSalary" value={userInput.maximumSalary}
             type='text'
-            placeholder="Enter your expected salarly" />
+            placeholder="Enter your expected salary" onChange={handleChange}/>
         </div>
 
         <div className="inside9">
           <label className="colour">Skills</label>
-          <select className="skill">
-            <option>select</option>
-            <option>C</option>
-            <option>C++</option>
-            <option>SOlona</option>
-            <option>Front End (javaScript)</option>
-            <option>React</option>
-            <option>C#/ .Net</option>
-            <option>Java</option>
-            <option>Php</option>
-            <option>Python</option>
-            <option>Node.js</option>
-            <option>Ruby</option>
-            <option>design</option>
-            <option>Social media</option>
-            <option>Anlyst</option>
-            <option>project manager</option>
-            <option>sevurity</option>
-            <option>scala</option>
-            <option>product manager</option>
-            <option>product manager</option>
-            <option>product manager</option>
-            <option>product manager</option>
-            <option>product manager</option>
-            <option>product manager</option>
+          <select className="skill" onChange={handleChange} name="skills">
+            {/* <option>select</option> */}
+            <option  value="C">C</option>
+            <option value="C++">C++</option>
+            <option  value="Front End">Front End</option>
+            <option value="React" >React</option>
+            <option value="C#">C#</option>
+            <option value="Solidity">Solidity</option>
+            <option value="Rust">Rust</option>
+            <option value="Python">Python</option>
+            <option value="Node js">Node js</option>
+            <option  value="Social Media">Social media</option>
+            <option  value="Ether js">Ether js</option>
+    
           </select>
         </div>
 
 
         <div className="inside9">
-          <label className="colour">skills</label>
+          <label className="colour">Additional Skills</label>
           <input className="skill"
             type='text'
-            placeholder="other skills" />
+            placeholder="Other skills" />
         </div>
 
 
         <div className="inside4">
           <label className="colour">Location</label>
-          <input className="form-location"
+          <input className="form-location" name="location" value={userInput.location} onChange={handleChange}
             type='text'
             placeholder="Your location" />
         </div>
 
         <div className="inside5">
           <label className="colour">Type</label>
-          <select className="type">
-            <option>select</option>
-            <option>Jobs</option>
-            <option>InternShip</option>
+          <select className="type" onChange={handleChange} name="type">
+            <option value="Job">Job</option>
+            <option value="Internship">Internship</option>
           </select>
         </div>
 
         <div className="inside6">
-          <label className="colour">Decription</label>
+          <label className="colour">Description</label>
           <textarea className="description"
             placeholder="About your Company"
-            rows="6" />
+            rows="6" name="description" value={userInput.description} onChange={handleChange} />
           <button className="submit">Submit</button>
         </div>
       </form>
