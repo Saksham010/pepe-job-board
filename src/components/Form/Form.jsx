@@ -1,39 +1,49 @@
 import React, { useState } from "react";
 import "./form.css"
+import Multiselect from "multiselect-react-dropdown";
 
 
 export default function Form() {
 
   const [userInput, setUserInput] = useState({
-    position:"",
-    company:"",
-    email:"",
-    minimumSalary:"",
-    maximumSalary:"",
-    skills:"",
-    additionalSkills:"",
-    location:"",
-    type:"",
-    description:""
+    position: "",
+    company: "",
+    email: "",
+    minimumSalary: "",
+    maximumSalary: "",
+    skills: "",
+    additionalSkills: "",
+    location: "",
+    type: "",
+    description: ""
   })
   console.log(userInput);
 
-  function updateState(key, value){
-    setUserInput(obj=>{
+  function updateState(key, value) {
+    setUserInput(obj => {
       const retObj = {
         ...obj,
       }
       retObj[key] = value;
       return retObj;
     })
-    
   }
 
-  function handleChange(event){
+
+  const [options, setOptions]= useState([
+    "C","C++","C#","Golang","Java",
+    "NodeJS","Php","python","Ruby","Rust",
+    "Flutter","React Native","Project Manager","Product Manager", "Social Media",
+    "Marketng","Reciuiter","Solidity","Solona","javaScript",
+])
+
+
+
+  function handleChange(event) {
     // console.log(event.target.name)
     const type = event.target.name;
     const data = event.target.value;
-    updateState(type,data);
+    updateState(type, data);
   }
 
   function handle() {
@@ -51,7 +61,7 @@ export default function Form() {
 
         <div className="inside2">
           <label className="colour">Company</label>
-          <input className="form-company" name="company" value={userInput.company} 
+          <input className="form-company" name="company" value={userInput.company}
             type='text'
             placeholder="Your company" onChange={handleChange} />
         </div>
@@ -59,42 +69,36 @@ export default function Form() {
         <div className="inside8">
           <label className="colour">Email</label>
           <input className="email" name="email" value={userInput.email}
-            type='text' 
+            type='text'
             required
-            placeholder="Your company"  onChange={handleChange}/>
+            placeholder="Your company" onChange={handleChange} />
         </div>
 
         <div className="inside3">
           <label className="colour">Minimum Salary</label>
           <input className="salarly" name="minimumSalary" value={userInput.minimumSalary}
             type='text'
-            placeholder="Enter your expected salary" onChange={handleChange}/>
+            placeholder="Enter your expected salary" onChange={handleChange} />
         </div>
 
         <div className="inside3">
           <label className="colour">Maximum Salary</label>
           <input className="salarly" name="maximumSalary" value={userInput.maximumSalary}
             type='text'
-            placeholder="Enter your expected salary" onChange={handleChange}/>
+            placeholder="Enter your expected salary" onChange={handleChange} />
         </div>
 
         <div className="inside9">
-          <label className="colour">Skills</label>
-          <select className="skill" onChange={handleChange} name="skills">
-            {/* <option>select</option> */}
-            <option  value="C">C</option>
-            <option value="C++">C++</option>
-            <option  value="Front End">Front End</option>
-            <option value="React" >React</option>
-            <option value="C#">C#</option>
-            <option value="Solidity">Solidity</option>
-            <option value="Rust">Rust</option>
-            <option value="Python">Python</option>
-            <option value="Node js">Node js</option>
-            <option  value="Social Media">Social media</option>
-            <option  value="Ether js">Ether js</option>
-    
-          </select>
+          <label className="colour" >Skills</label>
+            <Multiselect className="optionssss"
+            isObject={false}
+            onRemove={(event)=>{console.log(event)}}
+            onSelect={(event)=>{console.log(event)}}
+            options= {options}
+            showCheckbox={false}
+            hidePlaceholder={false}
+            keepSearchTerm={true}
+              />
         </div>
 
 
