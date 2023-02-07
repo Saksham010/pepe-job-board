@@ -2,8 +2,29 @@ import React, { useState } from "react";
 import "./form.css"
 import Multiselect from "multiselect-react-dropdown";
 
+//  const image_input = document.querySelector('#image_input');
+//  var uploaded_image = '';
+//  image_input.addEventListener('change', function () {
+//    const reader = new FileReader();
+//    reader.addEventListener('load', () => {
+//      uploaded_image = reader.result;
+//      document.querySelector('#display').style.backgroundImage = `url(${uploaded_image}) `
+//    })
+//    reader.readAsDataURL(this.files[0]);
+//  })
+
 
 export default function Form() {
+
+   function click() {
+     var uploaded_image = '';
+   const reader = new FileReader();
+     reader.addEventListener('load', () => {
+       uploaded_image = reader.result;
+       document.querySelector('#display').style.backgroundImage = `%PUBLIC_URL%/${uploaded_image}`
+    })
+     reader.readAsDataURL(this.files[0]);
+   }
 
   const [userInput, setUserInput] = useState({
     position: "",
@@ -30,12 +51,12 @@ export default function Form() {
   }
 
 
-  const [options, setOptions]= useState([
-    "C","C++","C#","Golang","Java",
-    "NodeJS","Php","python","Ruby","Rust",
-    "Flutter","React Native","Project Manager","Product Manager", "Social Media",
-    "Marketng","Reciuiter","Solidity","Solona","javaScript",
-])
+  const [options, setOptions] = useState([
+    "C", "C++", "C#", "Golang", "Java",
+    "NodeJS", "Php", "python", "Ruby", "Rust",
+    "Flutter", "React Native", "Project Manager", "Product Manager", "Social Media",
+    "Marketng", "Reciuiter", "Solidity", "Solona", "javaScript",
+  ])
 
 
 
@@ -90,15 +111,15 @@ export default function Form() {
 
         <div className="inside9">
           <label className="colour" >Skills</label>
-            <Multiselect className="optionssss"
+          <Multiselect className="optionssss"
             isObject={false}
-            onRemove={(event)=>{console.log(event)}}
-            onSelect={(event)=>{console.log(event)}}
-            options= {options}
+            onRemove={(event) => { console.log(event) }}
+            onSelect={(event) => { console.log(event) }}
+            options={options}
             showCheckbox={false}
             hidePlaceholder={false}
             keepSearchTerm={true}
-              />
+          />
         </div>
 
 
@@ -124,6 +145,14 @@ export default function Form() {
             <option value="Internship">Internship</option>
           </select>
         </div>
+
+
+
+        <div className="inside10">
+          <input type="file" id="image_input"   onClick={click}/>
+        </div>
+
+
 
         <div className="inside6">
           <label className="colour">Description</label>

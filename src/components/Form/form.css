@@ -266,4 +266,20 @@
 
  .optionssss{
     color: #519202;
+    background-color: #17091F;
+
  }
+
+
+    .inside10{
+        max-width: 500px;
+        height: 125px;
+        margin: auto;
+        color: white;
+        
+    } 
+
+    #image_input{
+        padding: 17px 88px;
+        border-radius: 5px;
+    }
