@@ -1,9 +1,13 @@
+:root {
+    --lime: rgb(204,237,126);
+    --green: #519202;
+}
 .navContainer{
     display: flex;
     /* border: 1px red solid; */
     justify-content: space-between;
     align-items: center;
-    color: #519202;
+    color: var(--lime);
     padding: 1rem;
     padding-left: 2.6vw;
     border-bottom: dotted;
@@ -27,7 +31,7 @@
     text-decoration: none;
 }
 .innerNav span{
-    color:#519202 ;
+    color:var(--lime) ;
     font-size: 1.4em;
     letter-spacing: -1px;
 }
@@ -37,9 +41,9 @@
 .innerNav button{
     padding: 0.8em;
     background-color:#17091F ;
-    border:1px #519202 solid;
+    border:1px var(--lime) solid;
     font-family: 'Press Start 2P';
-    color:#519202 ;
+    color:var(--lime) ;
     font-size: 1em;
     letter-spacing: -1px;
 }
@@ -54,14 +58,14 @@
     /* border: 1px green solid; */
     /* width: 40%; */
     align-items:center;
-    color: #519202;
+    color: var(--lime);
     flex:1;
 }
 .outerLogo span{
     padding-left: 0.8vw;
     font-size: 2em;
     letter-spacing: -2px;
-    color: #519202;
+    color: var(--lime);
 
 
 }

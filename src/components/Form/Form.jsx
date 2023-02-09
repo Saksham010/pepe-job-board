@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./form.css"
-import Multiselect from "multiselect-react-dropdown";
+// import Multiselect from "multiselect-react-dropdown";
+import { MultiSelect } from '@mantine/core';
+import { FileInput } from '@mantine/core';
+import { IconUpload } from '@tabler/icons';
 
 //  const image_input = document.querySelector('#image_input');
 //  var uploaded_image = '';
@@ -16,15 +19,16 @@ import Multiselect from "multiselect-react-dropdown";
 
 export default function Form() {
 
-   function click() {
-     var uploaded_image = '';
-   const reader = new FileReader();
-     reader.addEventListener('load', () => {
-       uploaded_image = reader.result;
-       document.querySelector('#display').style.backgroundImage = `%PUBLIC_URL%/${uploaded_image}`
-    })
-     reader.readAsDataURL(this.files[0]);
-   }
+  //  function click() {
+  //    var uploaded_image = '';
+  //     const reader = new FileReader();
+  //     reader.addEventListener('load', () => {
+  //      uploaded_image = reader.result;
+  //     //  document.querySelector('#display').style.backgroundImage = `%PUBLIC_URL%/${uploaded_image}`
+  //   })
+  //    reader.readAsDataURL(this.files[0]);
+  //  }
+
 
   const [userInput, setUserInput] = useState({
     position: "",
@@ -32,11 +36,12 @@ export default function Form() {
     email: "",
     minimumSalary: "",
     maximumSalary: "",
-    skills: "",
-    additionalSkills: "",
+    skills: [],
+    additionalSkills: [],
     location: "",
     type: "",
-    description: ""
+    description: "",
+    file:File,
   })
   console.log(userInput);
 
@@ -51,11 +56,22 @@ export default function Form() {
   }
 
 
-  const [options, setOptions] = useState([
-    "C", "C++", "C#", "Golang", "Java",
-    "NodeJS", "Php", "python", "Ruby", "Rust",
-    "Flutter", "React Native", "Project Manager", "Product Manager", "Social Media",
-    "Marketng", "Reciuiter", "Solidity", "Solona", "javaScript",
+
+  const options =  [
+    { value: 'react', label: 'React' },
+    { value: 'ng', label: 'Angular' },
+    { value: 'rust', label: 'Rust' },
+    { value: 'solidity', label: 'Solidity' },
+    { value: 'js', label: 'Javascript' },
+    { value: 'typescript', label: 'Typescript' },
+    { value: 'nodejs', label: 'Node js' },
+    { value: 'express', label: 'Express' },
+    { value: 'hardhat', label: 'Hardhat' },    
+    { value: 'Foundry', label: 'Foundry' },    
+  ];
+
+  const [additionalOptions,setadditional] = useState([
+    {value:'', label:''}
   ])
 
 
@@ -73,21 +89,21 @@ export default function Form() {
   return (
     <>
       <form className="overlay" onsubmit={handle} >
-        <div className="inside1">
+        <div className="inside" >
           <label className="colour">Position</label>
           <input className="position" name="position" value={userInput.position}
             type='text'
             placeholder="Enter your position" onChange={handleChange} />
         </div>
 
-        <div className="inside2">
+        <div className="inside">
           <label className="colour">Company</label>
           <input className="form-company" name="company" value={userInput.company}
             type='text'
             placeholder="Your company" onChange={handleChange} />
         </div>
 
-        <div className="inside8">
+        <div className="inside">
           <label className="colour">Email</label>
           <input className="email" name="email" value={userInput.email}
             type='text'
@@ -95,50 +111,82 @@ export default function Form() {
             placeholder="Your company" onChange={handleChange} />
         </div>
 
-        <div className="inside3">
+        <div className="inside">
           <label className="colour">Minimum Salary</label>
           <input className="salarly" name="minimumSalary" value={userInput.minimumSalary}
             type='text'
             placeholder="Enter your expected salary" onChange={handleChange} />
         </div>
 
-        <div className="inside3">
+        <div className="inside">
           <label className="colour">Maximum Salary</label>
           <input className="salarly" name="maximumSalary" value={userInput.maximumSalary}
             type='text'
             placeholder="Enter your expected salary" onChange={handleChange} />
         </div>
 
-        <div className="inside9">
-          <label className="colour" >Skills</label>
-          <Multiselect className="optionssss"
-            isObject={false}
-            onRemove={(event) => { console.log(event) }}
-            onSelect={(event) => { console.log(event) }}
-            options={options}
-            showCheckbox={false}
-            hidePlaceholder={false}
-            keepSearchTerm={true}
-          />
-        </div>
+      
+          <div className="inside" id="skillContainer">
+            <label className="colour" >Skills</label>
+            <MultiSelect
+                  data={options}
+                  placeholder="Skills"
+                  searchable
+                  nothingFound="Nothing found"
+                  clearButtonLabel="Clear selection"
+                  clearable
+                  onChange={(selctedValueArray)=>{
+                      //Updating  user Input
+                      setUserInput(obj=>{
+                        return{
+                          ...obj,
+                          skills: [...selctedValueArray]
+                        }
+                      });
+                    }
+                  }
+            
+                />
+          </div>
 
 
-        <div className="inside9">
-          <label className="colour">Additional Skills</label>
-          <input className="skill"
-            type='text'
-            placeholder="Other skills" />
-        </div>
+          <div className="inside" id="additionalContainer">
+            <label className="colour">Additional Skills</label>
+            <MultiSelect
+                  data={additionalOptions}
+                  placeholder="Additional Skills"
+                  clearButtonLabel="Clear selection"
+                  clearable
+                  searchable
+                  creatable
+                  getCreateLabel={(query) => `+ Create ${query}`}
+                  onCreate={(query) => {
+                    const item = { value: query, label: query };
+                    setadditional((current) => [...current, item]);
+                    return item;
+                  }}
+                  onChange={(selctedValueArray)=>{
+                    //Updating  user Input
+                    setUserInput(obj=>{
+                      return{
+                        ...obj,
+                        additionalSkills: [...selctedValueArray]
+                      }
+                    });
+                  }}  
+                              
+                />
+          </div>
 
 
-        <div className="inside4">
+        <div className="inside">
           <label className="colour">Location</label>
           <input className="form-location" name="location" value={userInput.location} onChange={handleChange}
             type='text'
             placeholder="Your location" />
         </div>
 
-        <div className="inside5">
+        <div className="inside">
           <label className="colour">Type</label>
           <select className="type" onChange={handleChange} name="type">
             <option value="Job">Job</option>
@@ -148,13 +196,29 @@ export default function Form() {
 
 
 
-        <div className="inside10">
-          <input type="file" id="image_input"   onClick={click}/>
+        <div className="inside">
+          {/* <input type="file" id="image_input" onClick={click}/> */}
+          <FileInput
+          label="Logo"
+          placeholder="Choose a picture" 
+          icon={<IconUpload size={14} />} 
+          value={userInput.file}
+
+          onChange={(selectedFile)=>{
+            //Updating  user Input
+            setUserInput(obj=>{
+              return{
+                ...obj,
+                file: selectedFile
+              }
+            });
+          }}      
+          />
         </div>
 
 
 
-        <div className="inside6">
+        <div className="inside">
           <label className="colour">Description</label>
           <textarea className="description"
             placeholder="About your Company"

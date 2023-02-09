@@ -2,6 +2,11 @@
     padding-top: 5vw;
 }
 
+:root {
+    --lime: rgb(204,237,126);
+    --green: #519202;
+  }
+
 .job-container{
     margin: auto;
     border: 1px #333546 solid;
