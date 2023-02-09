@@ -27,7 +27,9 @@
     font-family: 'Press Start 2P';
     font-size: 9.5px;
 
-
+}
+.overlay #skillContainer input,.overlay #additionalContainer input{
+    border: none;
 }
 .overlay input:focus{
     outline: none;
