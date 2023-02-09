@@ -1,7 +1,9 @@
 import "./homepage.css";
 import { useState } from "react";
 import { Pagination } from '@mantine/core';
-
+import 'winbox/dist/css/winbox.min.css'; // required
+// import 'winbox/dist/css/themes/modern.min.css'; // optional
+import WinBox from 'react-winbox';
 export default function Homepage(){
 
     //Pagination
@@ -75,35 +77,101 @@ export default function Homepage(){
         return count;
     }
 
+    //State for winbox
+    const[showBox,setShowBox] = useState([-1]);
+
+
+    console.log("show box: ",showBox);
+
+    //Handle close
+    function handleClose(index){
+        setShowBox(arr=>{
+            return arr.filter(x => x != index);
+        })
+    }
+
+    function showWinbox(data, index){
+        
+        return(
+            <>
+                {showBox.map(value=>{
+                    console.log("value: ",value, "Index: ",index);
+                    if(value == index){
+                       return(
+
+                        <WinBox
+                            width={500}
+                            height={300}
+                            x="center"
+                            y={30}
+                            onClose={()=>{handleClose(index)}}
+                            >
+                            <div>
+                                <h1>{data}</h1>
+                            </div>
+                        </WinBox>
+                       )
+
+                    }
+                })}
+
+            </>
+        )
+    }
+
 
     function element(title,company,imgPath,location,index){
         return(
-     
-            <div className="job-box" key={index}>
-                <div className="job-first">
-                    <div className="job-logo">
-                        <img src={imgPath} alt="logo"/>
-                    </div>
 
-                    <div className="job-info">
-                        <div className="title">
-                            <span>{title}</span>
-                        </div>
-                        <div className="company">
-                            <span>{company}</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="location">
-                    <h5>{location}</h5>
-                </div>
-            </div>
+            <>
             
+                <div className="job-box" key={index} onClick={()=>{
+                    //Toggle display of winbox
+                    // toggleWinbox(index);
+                    let isopen = false;
+                    showBox.map(i =>{
+                        console.log("i:Vale ",i, "index: ",index);
+                        if(i == index){
+                            isopen = true;
+                        }
+                    })
+                    if(isopen == false){
+                        setShowBox(prevarr =>{
+                            return [...prevarr, index];
+                        })
+                    }
+                    else{
+                        console.log("already open")
+                    }
+
+                }}>
+                    <div className="job-first">
+                        <div className="job-logo">
+                            <img src={imgPath} alt="logo"/>
+                        </div>
+
+                        <div className="job-info">
+                            <div className="title">
+                                <span>{title}</span>
+                            </div>
+                            <div className="company">
+                                <span>{company}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="location">
+                        <h5>{location}</h5>
+                    </div>
+                </div>
+                {showWinbox(title,index)};
+
+            </>   
 
         );
 
     }
+
 
     const content = currentRecords.map((obj,i)=>{
         return (
@@ -115,6 +183,12 @@ export default function Homepage(){
     })
     console.log(activePage);
 
+    //Close all opened box
+    function closeBox(){
+        setShowBox(prev=>{
+            return [-1];
+        })
+    }
 
     return(
         <div className="homepage">
@@ -122,7 +196,11 @@ export default function Homepage(){
 
                 {content}
 
-                <Pagination page={activePage} onChange={setPage} total={Math.ceil(getTotalJobs()/5)} color="teal" position="center"/>
+                <Pagination page={activePage} onChange={(pageNumber)=>{
+                    setPage(pageNumber);
+                    //Close opened box
+                    closeBox();
+                }} total={Math.ceil(getTotalJobs()/5)} color="teal" position="center"/>
             </div>
 
 
