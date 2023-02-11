@@ -99,5 +99,5 @@
 .wb-body{
     padding: 1rem;
     color: var(--lime);
-    background: var(--background) !im ;
+    background: var(--background) !important;
 }
