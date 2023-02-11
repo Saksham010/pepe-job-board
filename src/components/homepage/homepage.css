@@ -5,6 +5,8 @@
 :root {
     --lime: rgb(204,237,126);
     --green: #519202;
+    --background: #17091F;
+    --lightbackground: #333546;
   }
 
 .job-container{
@@ -73,3 +75,25 @@
     border-radius: 4px;
 }
 
+
+
+/* Drag */
+.wb-body{
+    border: 1px var(--lightbackground) solid;
+
+}
+.wb-drag{
+    background-color: var(--lime);
+}
+
+.wb-title{
+    color: black;
+    font-family: 'Press Start 2P' !important;
+
+}
+
+.wb-body{
+    padding: 1rem;
+    color: var(--lime);
+    background: var(--background);
+}

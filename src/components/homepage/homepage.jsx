@@ -1,10 +1,12 @@
 import "./homepage.css";
-import { useState } from "react";
+import { useState,useRef} from "react";
 import { Pagination } from '@mantine/core';
 import 'winbox/dist/css/winbox.min.css'; // required
 // import 'winbox/dist/css/themes/modern.min.css'; // optional
 import WinBox from 'react-winbox';
 export default function Homepage(){
+
+    const ref = useRef();
 
     //Pagination
     const [activePage,setPage] = useState(1);
@@ -80,31 +82,40 @@ export default function Homepage(){
     //State for winbox
     const[showBox,setShowBox] = useState([-1]);
 
-
     console.log("show box: ",showBox);
+
+    //Trigger
 
     //Handle close
     function handleClose(index){
+        
         setShowBox(arr=>{
-            return arr.filter(x => x != index);
+            const returnedArr =  arr.filter(x => x != index);
+            console.log("returend arr: ",returnedArr);
+            return returnedArr;
         })
+    
     }
 
     function showWinbox(data, index){
-        
+                
         return(
             <>
                 {showBox.map(value=>{
-                    console.log("value: ",value, "Index: ",index);
                     if(value == index){
+                        console.log("value: ",value, "Index: ",index);
+                        
                        return(
-
                         <WinBox
-                            width={500}
-                            height={300}
-                            x="center"
-                            y={30}
-                            onClose={()=>{handleClose(index)}}
+                            width={800}
+                            height={750}
+                            x={950}
+                            y={140}
+                            title={data}
+                            onClose={(event)=>{
+                                handleClose(index);
+                            }}
+                            
                             >
                             <div>
                                 <h1>{data}</h1>
