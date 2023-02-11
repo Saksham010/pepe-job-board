@@ -7,6 +7,7 @@
     --green: #519202;
     --background: #17091F;
     --lightbackground: #333546;
+    --prevborder:#202231;
   }
 
 .job-container{
@@ -24,17 +25,20 @@
 .job-box{
     /* border: 1px blue solid; */
     padding: 3vh;
-    color: white;
+    color: var(--lime);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #202231;
+    background-color: var(--background);
     /* border: 2px #519202 dotted; */
-    border-radius:7px;
+    border: 1px #3c3e4e solid;
+    /* border: 1px  solid; */
+    border-radius: 3px;
+
     
 }
 .job-box:hover{
-    border: 0.7px #3c3e4e solid;
+    border: 0.7px var(--lime) solid;
     cursor: pointer;
 }
 
@@ -95,5 +99,5 @@
 .wb-body{
     padding: 1rem;
     color: var(--lime);
-    background: var(--background);
+    background: var(--background) !im ;
 }
