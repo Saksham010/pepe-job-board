@@ -211,7 +211,9 @@ export default function Homepage(){
                     setPage(pageNumber);
                     //Close opened box
                     closeBox();
-                }} total={Math.ceil(getTotalJobs()/5)} color="teal" position="center"/>
+                }} total={Math.ceil(getTotalJobs()/5)}
+                 color="dark" 
+                 position="center"/>
             </div>
 
 
