@@ -81,7 +81,7 @@ export default function Homepage(){
 
                                     <h5>{data.salaryMin} - {data.salaryMax}</h5>
                                 </div>
-                                <div className="job-lower">
+                                <div className="job-lower job-location">
 
                                     <h5>{data.location}</h5>
                                 </div>

@@ -141,16 +141,23 @@
     padding: 0.3rem 1rem;
 }
 
+.winboxContent .job-location{
+    padding-bottom: 0.5rem;
+}
+
 
 .jobdetail .detailbox {
     /* border: 1px red solid; */
     padding:1rem;
 }
 
+
 .jobdetail .detailbox h1{
     /* border: 1px red solid; */
     padding-bottom: 0.9rem;
 }
+
+
 
 .jobdetail .detailbox p{
     font-size: 0.7em;
