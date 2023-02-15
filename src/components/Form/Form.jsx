@@ -4,6 +4,7 @@ import "./form.css"
 import { MultiSelect } from '@mantine/core';
 import { FileInput } from '@mantine/core';
 import { IconUpload } from '@tabler/icons';
+import { useEffect } from "react";
 
 //  const image_input = document.querySelector('#image_input');
 //  var uploaded_image = '';
@@ -45,9 +46,12 @@ export default function Form() {
     candidateTask:"",
     jobRequirement:"",
     benefits:"",
+    parsedCandidateTask:"",
+    parsedJobRequirement:"",
+    parsedBenefits:"",
     file:File,
   })
-  // console.log(userInput);
+  console.log(userInput);
 
   function updateState(key, value) {
     setUserInput(obj => {
@@ -118,15 +122,92 @@ export default function Form() {
 
       }
     }
+  }
+
+  useEffect(()=>{
+    parseToJSX();
+
+  },[userInput.jobRequirement, userInput.candidateTask, userInput.benefits]);
+
+  //Function to parsed int jsx
+  function parseToJSX(event){
+    const task = userInput.candidateTask;
+    const benefit = userInput.benefits;
+    const requirement = userInput.jobRequirement;
+
+    //Parsing task
+    let openedtask =  task.replaceAll("\u2022","<li>");
+    let closedtask = openedtask.replaceAll("\n","</li>\n");
+
+    //Parsing benefit
+    let openedbenefit =  benefit.replaceAll("\u2022","<li>");
+    let closedbenefit = openedbenefit.replaceAll("\n","</li>\n");
+
+    //Parsing requirement
+    let openedrequirement =  requirement.replaceAll("\u2022","<li>");
+    let closedrequirement = openedrequirement.replaceAll("\n","</li>\n");
+
+    //Updating state
+    setUserInput(obj=>{
+      return{
+        ...obj,
+        parsedJobRequirement:closedrequirement,
+        parsedBenefits:closedbenefit,
+        parsedCandidateTask:closedtask,
+      }
+    })
     
   }
 
-  function handle() {
-    console.log("form submitted");
+  
+
+  //Function to clean parsed jsx on submit
+  function cleanParsedData(type){
+    const data = userInput[type];
+
+    // case I: if bullet is only left
+    if(data.slice(-5) == "<li> " || data.slice(-5) == "<li>"){
+      const trimmedString = data.slice(0,-5);
+      //Update the parsed String
+      setUserInput(obj=>{
+        let testobj = {...obj,};
+        testobj[type] = trimmedString;
+        return testobj;
+      })
+    }
+    else if(data.slice(-1) == "\n"){
+      const trimmedString = data.slice(0,-1);
+      //Update the parsed String
+      setUserInput(obj=>{
+        let testobj = {...obj,};
+        testobj[type] = trimmedString;
+        return testobj;
+      })
+    }
+    else if(data.slice(-5) != "<li> " && data != ""){
+      const finalString = data.concat("</li>");
+      //Update the parsed String
+      setUserInput(obj=>{
+        let testobj = {...obj,};
+        testobj[type] = finalString;
+        return testobj;
+      })
+    }
+
   }
+
+
+  function handleSumbit(){
+    //Clean parsing    
+    cleanParsedData("parsedCandidateTask");
+    cleanParsedData("parsedBenefits");
+    cleanParsedData("parsedJobRequirement");
+
+  }
+
   return (
     <>
-      <form className="overlay" onsubmit={handle} >
+      <form className="overlay"  >
         <div className="inside" >
           <label className="colour">Position</label>
           <input className="position" name="position" value={userInput.position}
@@ -278,7 +359,7 @@ export default function Form() {
           <textarea className="description description-bullet"
             placeholder="About job benefits"
             rows="12" name="benefits" value={userInput.benefits} onChange={handleTextArea} />
-          <button className="submit">Submit</button>
+          <button className="submit" onClick={handleSumbit}>Submit</button>
         </div>
       </form>
 
