@@ -348,4 +348,11 @@
 }
 
 
-/* Final input padding */
+/* Description bullet */
+#jobinput .padrem{
+    display: block;
+    padding-top: 2rem;
+}   
+.description-bullet{
+    line-height: 1.8em;
+}

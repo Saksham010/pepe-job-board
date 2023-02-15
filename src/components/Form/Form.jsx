@@ -40,10 +40,14 @@ export default function Form() {
     additionalSkills: [],
     location: "",
     type: "",
-    description: "",
+    background: "",
+    jobDescription:"",
+    candidateTask:"",
+    jobRequirement:"",
+    benefits:"",
     file:File,
   })
-  console.log(userInput);
+  // console.log(userInput);
 
   function updateState(key, value) {
     setUserInput(obj => {
@@ -81,6 +85,40 @@ export default function Form() {
     const type = event.target.name;
     const data = event.target.value;
     updateState(type, data);
+  }
+
+  function handleTextArea(event){
+    const data = event.target.value;
+    const type = event.target.name;
+    const previousLength = userInput[type].length;
+    const bullet = "\u2022";
+    const newLength = event.target.value.length;
+    const characterCode = event.target.value.substr(-1).charCodeAt(0);
+
+    console.log("newlenght: ",newLength);
+    console.log("prevlength: ", previousLength);
+  
+    if (newLength > previousLength) {
+      if (characterCode === 10) {
+        let modifieddata = `${data}${bullet} `
+        updateState(type,modifieddata)
+      } else if (newLength === 1) {
+        let modifieddata = `${bullet} ${data}`;
+        updateState(type,modifieddata);
+      }else{
+        updateState(type,data);
+      }
+    }
+    else{
+      if(newLength === 2){
+        updateState(type,"");
+      }
+      else{
+        updateState(type,data);
+
+      }
+    }
+    
   }
 
   function handle() {
@@ -218,11 +256,28 @@ export default function Form() {
 
 
 
-        <div className="inside">
-          <label className="colour">Description</label>
-          <textarea className="description"
-            placeholder="About your Company"
-            rows="6" name="description" value={userInput.description} onChange={handleChange} />
+        <div className="inside" id="jobinput">
+          <label className="colour ">Background</label>
+          <textarea className="description description-bullet"
+            placeholder="About your company"
+            rows="12" name="background" value={userInput.background} onChange={handleChange} />
+          <label className="colour padrem">Job Description</label>
+          <textarea className="description description-bullet"
+            placeholder="About the Job"
+            rows="12" name="jobDescription" value={userInput.jobDescription} onChange={handleChange} />
+
+          <label className="colour padrem">Candidate's work</label>
+          <textarea className="description description-bullet"
+            placeholder="About what the candidate will do"
+            rows="12" name="candidateTask" value={userInput.candidateTask} onChange={handleTextArea} />
+          <label className="colour padrem">Requirement</label>
+          <textarea className="description description-bullet"
+            placeholder="About skill requirement"
+            rows="12" name="jobRequirement" value={userInput.jobRequirement} onChange={handleTextArea} />
+          <label className="colour padrem">Benefits</label>
+          <textarea className="description description-bullet"
+            placeholder="About job benefits"
+            rows="12" name="benefits" value={userInput.benefits} onChange={handleTextArea} />
           <button className="submit">Submit</button>
         </div>
       </form>

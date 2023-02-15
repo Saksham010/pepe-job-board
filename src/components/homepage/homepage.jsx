@@ -178,7 +178,7 @@ export default function Homepage(){
                         <h5>{location}</h5>
                     </div>
                 </div>
-                {showWinbox({title,company,location,companyDescription,jobDescription,jobResponsibilities,jobRequirement,jobBenefits,salaryMin,salaryMax},index)};
+                {showWinbox({title,company,location,companyDescription,jobDescription,jobResponsibilities,jobRequirement,jobBenefits,salaryMin,salaryMax},index)}
 
             </>   
         );
