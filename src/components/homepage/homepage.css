@@ -8,6 +8,7 @@
     --background: #17091F;
     --lightbackground: #333546;
     --prevborder:#202231;
+    --bordercolor:#3c3e4e;
   }
 
 .job-container{
@@ -102,6 +103,7 @@
     background: var(--background) !important;
 }
 
+
 /* Pagination css */
 .mantine-Pagination-item{
     /* color: var(--lime); */
@@ -113,4 +115,80 @@
 /* Active button */
 .mantine-1l286fk[data-active]{
     color: var(--lime);
+}
+
+
+/* Winbox content design */
+.winboxContent h1{
+    font-size: 1rem;
+    color: var(--lime);
+    /* color: yellowgreen; */
+    
+}
+.winboxContent h5{
+    font-weight: normal;
+    font-size: 0.7em;
+    /* color: yellow; */
+    color: #FFFF5C;
+}
+.winboxContent .job-upper{
+    padding: 1rem 0 0.5rem 1rem;
+    /* border: 1px blue solid; */
+}
+
+
+.winboxContent .job-lower{
+    padding: 0.3rem 1rem;
+}
+
+
+.jobdetail .detailbox {
+    /* border: 1px red solid; */
+    padding:1rem;
+}
+
+.jobdetail .detailbox h1{
+    /* border: 1px red solid; */
+    padding-bottom: 0.9rem;
+}
+
+.jobdetail .detailbox p{
+    font-size: 0.7em;
+    line-height: 1.9em;
+    font-weight: bold;
+    /* color: yellow; */
+    color: #FFFF5C;
+}
+
+
+.jobdetail li::marker{
+    font-size: 2em;
+    border: 1px red solid;
+
+}
+.jobdetail .bullet p{
+    padding-left: 1.3rem;
+}
+
+/* Apply button */
+.winboxContent .applybutton{
+
+    /* padding-left: 1rem; */
+    padding-right: 1rem;
+    text-align: right;
+}
+.winboxContent .applybutton button{
+    /* padding: 1rem; */
+    /* text-align: center; */
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+}
+.winboxContent .applybutton button:hover{
+    opacity: 0.9;
 }
