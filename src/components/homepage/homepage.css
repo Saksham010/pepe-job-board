@@ -266,14 +266,13 @@ padding-bottom: 40px;
 margin: 6px; 
 width: 31% ;
 font-size: 10px;
-
 padding: 3vh;
     color: var(--lime);
     justify-content: space-between;
     align-items: center;
     background-color: var(--background);
     border: 1px #3c3e4e solid;
-    border-radius: 3px;
+    border-radius: 15px;
     font-family: 'Press Start 2P';
     margin: 15px 6px;
 }
