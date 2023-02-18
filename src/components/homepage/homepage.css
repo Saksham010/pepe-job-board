@@ -1,5 +1,10 @@
 .homepage{
     padding-top: 5vw;
+
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex; 
 }
 
 :root {
@@ -17,6 +22,8 @@
     border-radius: 6px;
     width: 50vw;
     padding: 3vh;
+
+    float: left;
 
 }
 /* .job-container:hover{
@@ -205,39 +212,220 @@
 
 
 
+
+.Box{
+    border: 1px #333546 solid;
+    border-radius: 6px;
+    width: 50vw;
+    padding: 3vh;
+
+    float: right;
+}
+
+
 .jobb{
     display: flex;
+     padding: 3vh;
+     color: var(--lime);
+     justify-content: space-between;
+     align-items: center;
+     background-color: var(--background);
+     border: 1px #3c3e4e solid;
+     border-radius: 3px;
 }
 
 .container_1{
-   background-color: blue;
-   margin-top: 18px;
-   width: 50%;
+   width: 100%;
 }
 
 .jobb_heading{
-    color: wheat;
+    color: var(--lime);
     font-size: 18px;
+    padding-bottom: 10px;
+    padding-left: 125px;
 }
 
 .jobb_span{
-    color: wheat;
+    color: var(--lime);
     font-size: 18px;
-    padding-top: 18px;
+    padding-left: 125px;
 }
 
 
 
 .buttonn{
-    background-color: gray;
-    color: antiquewhite;
-   width: 50%; 
-   padding: 25px;
+    
+color: var(--lime);
+width: 100%; 
+padding-top: 40px;
+padding-bottom: 40px;
 
 }
 
 
 .buttonn1{
 margin: 6px; 
-padding: 12px;
+width: 31% ;
+font-size: 15px;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+    font-family: 'Press Start 2P';
+    margin: 15px 10px;
 }
+
+.buttonn1:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
+
+
+/* .buttonn2{
+margin: 6px; 
+width: 31% ;
+
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+
+.buttonn3{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+
+.buttonn4{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+
+
+.buttonn5{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+    
+.buttonn6{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+    
+.buttonn7{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+    
+.buttonn8{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+
+.buttonn9{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+        
+.buttonn10{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+        
+.buttonn11{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+}
+        
+.buttonn12{
+margin: 6px; 
+width: 31% ;
+
+padding: 3vh;
+    color: var(--lime);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    border: 1px #3c3e4e solid;
+    border-radius: 3px;
+} */

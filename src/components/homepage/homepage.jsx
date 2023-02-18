@@ -234,6 +234,7 @@ export default function Homepage() {
 
     return (
         <div className="homepage">
+
             <div className="job-container ">
 
                 {content}
@@ -246,28 +247,37 @@ export default function Homepage() {
                     color="dark"
                     position="center" />
             </div>
-            <div className="jobb">
-                <div className="container_1">
-                    <h1 className="jobb_heading">Can't find the job you want ?</h1>
-                    <span className="jobb_span">
-                        Check out these job portal.
-                    </span>
+
+
+
+      
+            <div className="Box">
+                <div className="jobb">
+                    <div className="container_1">
+                        <h1 className="jobb_heading">Can't find the job you want ?</h1>
+                        <span className="jobb_span">
+                            Check out these job portal.
+                        </span>
+                    </div>
+                </div>
+                <div className=" buttonn">
+                    <button name="workOS" className="buttonn1" onClick={handleClick}>workOS</button>
+                    <button name="web3_Jobs" className="buttonn1" onClick={handleClick}>web3_Jobs</button>
+                    <button name="hustleverse" className="buttonn1" onClick={handleClick}>Hustleverse</button>
+                    <button name="Hunted" className="buttonn1" onClick={handleClick}>Hunted</button>
+                    <button name=" job_hunt_stack" className="buttonn1" onClick={handleClick}> job_hunt_stack</button>
+                    <button name=" Web3_army" className="buttonn1" onClick={handleClick}> Web3_army</button>
+                    <button name="Crypto_jobs_list" className="buttonn1" onClick={handleClick}>Crypto_jobs_list</button>
+                    <button name="seaLaunch" className="buttonn1" onClick={handleClick}>seaLaunch</button>
+                    <button name="Aworker" className="buttonn1" onClick={handleClick}>Aworker</button>
+                    <button name=" crypto_Jobs" className="buttonn1" onClick={handleClick}> crypto_Jobs</button>
+                    <button name="New_grad" className="buttonn1" onClick={handleClick}>New_grad</button>
+                    <button name="candena" className="buttonn1" onClick={handleClick}>candena</button>
                 </div>
             </div>
-            <div className=" buttonn">
-                <button name="workOS" className="buttonn1" onClick={handleClick}>workOS</button>
-                <button name="web3_Jobs" className="buttonn1" onClick={handleClick}>web3_Jobs</button>
-                <button name="hustleverse" className="buttonn1" onClick={handleClick}>Hustleverse</button>
-                <button name="Hunted" className="buttonn1" onClick={handleClick}>Hunted</button>
-                <button name=" job_hunt_stack" className="buttonn1" onClick={handleClick}> job_hunt_stack</button>
-                <button name=" Web3_army" className="buttonn1" onClick={handleClick}> Web3_army</button>
-                <button name="Crypto_jobs_list" className="buttonn1" onClick={handleClick}>Crypto_jobs_list</button>
-                <button name="seaLaunch" className="buttonn1" onClick={handleClick}>seaLaunch</button>
-                <button name="Aworker" className="buttonn1" onClick={handleClick}>Aworker</button>
-                <button name=" crypto_Jobs" className="buttonn1" onClick={handleClick}> crypto_Jobs</button>
-                <button name="New_grad" className="buttonn1" onClick={handleClick}>New_grad</button>
-                <button name="candena" className="buttonn1" onClick={handleClick}>candena</button>
-            </div>
+
+
+
         </div>
 
     )
