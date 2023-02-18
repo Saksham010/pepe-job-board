@@ -218,7 +218,6 @@
     border-radius: 6px;
     width: 50vw;
     padding: 3vh;
-
     float: right;
 }
 
@@ -241,14 +240,14 @@
 .jobb_heading{
     color: var(--lime);
     font-size: 18px;
-    padding-bottom: 10px;
-    padding-left: 125px;
+    padding-bottom: 22px;
+     padding-left: 100px; 
 }
 
 .jobb_span{
     color: var(--lime);
     font-size: 18px;
-    padding-left: 125px;
+     padding-left: 125px; 
 }
 
 
@@ -266,7 +265,7 @@ padding-bottom: 40px;
 .buttonn1{
 margin: 6px; 
 width: 31% ;
-font-size: 15px;
+font-size: 10px;
 
 padding: 3vh;
     color: var(--lime);
@@ -276,7 +275,7 @@ padding: 3vh;
     border: 1px #3c3e4e solid;
     border-radius: 3px;
     font-family: 'Press Start 2P';
-    margin: 15px 10px;
+    margin: 15px 6px;
 }
 
 .buttonn1:hover{
@@ -285,147 +284,3 @@ padding: 3vh;
 }
 
 
-/* .buttonn2{
-margin: 6px; 
-width: 31% ;
-
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-
-.buttonn3{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-
-.buttonn4{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-
-
-.buttonn5{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-    
-.buttonn6{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-    
-.buttonn7{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-    
-.buttonn8{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-
-.buttonn9{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-        
-.buttonn10{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-        
-.buttonn11{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-}
-        
-.buttonn12{
-margin: 6px; 
-width: 31% ;
-
-padding: 3vh;
-    color: var(--lime);
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--background);
-    border: 1px #3c3e4e solid;
-    border-radius: 3px;
-} */
