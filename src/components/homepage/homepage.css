@@ -199,3 +199,45 @@
 .winboxContent .applybutton button:hover{
     opacity: 0.9;
 }
+
+
+
+
+
+
+.jobb{
+    display: flex;
+}
+
+.container_1{
+   background-color: blue;
+   margin-top: 18px;
+   width: 50%;
+}
+
+.jobb_heading{
+    color: wheat;
+    font-size: 18px;
+}
+
+.jobb_span{
+    color: wheat;
+    font-size: 18px;
+    padding-top: 18px;
+}
+
+
+
+.buttonn{
+    background-color: gray;
+    color: antiquewhite;
+   width: 50%; 
+   padding: 25px;
+
+}
+
+
+.buttonn1{
+margin: 6px; 
+padding: 12px;
+}
