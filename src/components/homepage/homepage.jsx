@@ -261,18 +261,18 @@ export default function Homepage() {
                     </div>
                 </div>
                 <div className=" buttonn">
-                    <button name="workOS" className="buttonn1" onClick={handleClick}>workOS</button>
+                    <button name="workOS" className="buttonn1" onClick={handleClick}>WorkOS</button>
                     <button name="web3_Jobs" className="buttonn1" onClick={handleClick}>web3_Jobs</button>
                     <button name="hustleverse" className="buttonn1" onClick={handleClick}>Hustleverse</button>
                     <button name="Hunted" className="buttonn1" onClick={handleClick}>Hunted</button>
-                    <button name=" job_hunt_stack" className="buttonn1" onClick={handleClick}> job_hunt_stack</button>
-                    <button name=" Web3_army" className="buttonn1" onClick={handleClick}> Web3_army</button>
-                    <button name="Crypto_jobs_list" className="buttonn1" onClick={handleClick}>Crypto_jobs_list</button>
-                    <button name="seaLaunch" className="buttonn1" onClick={handleClick}>seaLaunch</button>
+                    <button name=" job_hunt_stack" className="buttonn1" onClick={handleClick}> Job_Hunt_Stack</button>
+                    <button name=" Web3_army" className="buttonn1" onClick={handleClick}> Web3_Army</button>
+                    <button name="Crypto_jobs_list" className="buttonn1" onClick={handleClick}>Crypto_Jobs_List</button>
+                    <button name="seaLaunch" className="buttonn1" onClick={handleClick}>SeaLaunch</button>
                     <button name="Aworker" className="buttonn1" onClick={handleClick}>Aworker</button>
-                    <button name=" crypto_Jobs" className="buttonn1" onClick={handleClick}> crypto_Jobs</button>
-                    <button name="New_grad" className="buttonn1" onClick={handleClick}>New_grad</button>
-                    <button name="candena" className="buttonn1" onClick={handleClick}>candena</button>
+                    <button name=" crypto_Jobs" className="buttonn1" onClick={handleClick}> Crypto_Jobs</button>
+                    <button name="New_grad" className="buttonn1" onClick={handleClick}>New_Grad</button>
+                    <button name="candena" className="buttonn1" onClick={handleClick}>Candena</button>
                 </div>
             </div>
 

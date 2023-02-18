@@ -41,7 +41,7 @@
     /* border: 2px #519202 dotted; */
     border: 1px #3c3e4e solid;
     /* border: 1px  solid; */
-    border-radius: 3px;
+    border-radius: 5px;
 
     
 }
@@ -230,12 +230,9 @@
      align-items: center;
      background-color: var(--background);
      border: 1px #3c3e4e solid;
-     border-radius: 3px;
+     border-radius: 5px;
 }
 
-.container_1{
-   width: 100%;
-}
 
 .jobb_heading{
     color: var(--lime);
@@ -247,7 +244,7 @@
 .jobb_span{
     color: var(--lime);
     font-size: 18px;
-     padding-left: 125px; 
+     padding-left: 115px; 
 }
 
 
