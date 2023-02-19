@@ -254,26 +254,70 @@ export default function Homepage() {
             <div className="Box">
                 <div className="jobb">
                     <div className="container_1">
-                        <h1 className="jobb_heading">Can't find the job you want ?</h1>
+                        {<h1 className="jobb_heading">Can't find the job you want ?</h1> }
                         <span className="jobb_span">
                             Check out these job portal.
                         </span>
                     </div>
                 </div>
                 <div className=" buttonn">
-                    <button name="workOS" className="buttonn1" onClick={handleClick}>WorkOS</button>
-                    <button name="web3_Jobs" className="buttonn1" onClick={handleClick}>web3_Jobs</button>
-                    <button name="hustleverse" className="buttonn1" onClick={handleClick}>Hustleverse</button>
-                    <button name="Hunted" className="buttonn1" onClick={handleClick}>Hunted</button>
-                    <button name=" job_hunt_stack" className="buttonn1" onClick={handleClick}> Job_Hunt_Stack</button>
-                    <button name=" Web3_army" className="buttonn1" onClick={handleClick}> Web3_Army</button>
-                    <button name="Crypto_jobs_list" className="buttonn1" onClick={handleClick}>Crypto_Jobs_List</button>
-                    <button name="seaLaunch" className="buttonn1" onClick={handleClick}>SeaLaunch</button>
-                    <button name="Aworker" className="buttonn1" onClick={handleClick}>Aworker</button>
-                    <button name=" crypto_Jobs" className="buttonn1" onClick={handleClick}> Crypto_Jobs</button>
-                    <button name="New_grad" className="buttonn1" onClick={handleClick}>New_Grad</button>
-                    <button name="candena" className="buttonn1" onClick={handleClick}>Candena</button>
+
+                    <div className="b1">
+                        <button name="workOS" className="buttonn1" onClick={handleClick}>WorkOS</button>
+                    </div>
+
+                    <div className="b2">
+                        <button name="web3_Jobs" className="buttonn2" onClick={handleClick}>web3_Jobs</button>
+                        <button name="hustleverse" className="buttonn3" onClick={handleClick}>Hustleverse</button>
+                        <button name="Hunted" className="buttonn4" onClick={handleClick}>Hunted</button>
+                        <button name=" Web3_army" className="buttonn5" onClick={handleClick}> Web3_Army</button>
+                        <button name="Aworker" className="buttonn6" onClick={handleClick}>Aworker</button>
+                    </div>
+
+                    <div className="b3">
+                        <button name="seaLaunch" className="buttonn7" onClick={handleClick}>SeaLaunch</button>
+                    </div>
+
+                    <div className="b4">
+                        <button name="candena" className="buttonn8" onClick={handleClick}>Candena</button>
+                    </div>
+                    
+                    <div className="bb1">
+                        <div className="b5">
+                            <button name=" crypto_Jobs" className="buttonn9" onClick={handleClick}> Crypto_Jobs</button>
+                        </div>
+
+                        <div className="b6">
+                            <button name="New_grad" className="buttonn10" onClick={handleClick}>New_Grad</button>
+                        </div>
+                    </div>
+
+                    <div className="bb2">
+                        <div className="b7">
+                            <button name=" job_hunt_stack" className="buttonn11" onClick={handleClick}> Job_Hunt_Stack</button>
+                        </div>
+
+                        <div className="b8">
+                            <button name="Crypto_jobs_list" className="buttonn12" onClick={handleClick}>Crypto_Jobs_List</button>
+                        </div>
+                    </div>
+
                 </div>
+
+                <div className="pg">
+
+                    {/* {content}  */}
+
+                    {/* <Pagination page={activePage} onChange={(pageNumber) => {
+                        setPage(pageNumber);
+                        //Close opened box
+                        closeBox();
+                    }} total={Math.ceil(getTotalJobs() / 5)}
+                        color="dark"
+                        position="center" /> */}
+                        <Pagination page={activePage}/>
+                    </div>
+
             </div>
 
 
