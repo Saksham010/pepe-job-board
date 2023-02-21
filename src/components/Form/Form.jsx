@@ -5,6 +5,8 @@ import { MultiSelect } from '@mantine/core';
 import { FileInput } from '@mantine/core';
 import { IconUpload } from '@tabler/icons';
 import { useEffect } from "react";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { database } from "../../firebaseConfig";
 
 //  const image_input = document.querySelector('#image_input');
 //  var uploaded_image = '';
@@ -31,6 +33,8 @@ export default function Form() {
   //  }
 
 
+
+
   const [userInput, setUserInput] = useState({
     position: "",
     company: "",
@@ -49,7 +53,7 @@ export default function Form() {
     parsedCandidateTask:"",
     parsedJobRequirement:"",
     parsedBenefits:"",
-    file:File,
+    file:"File",
   })
   console.log(userInput);
 
@@ -62,6 +66,13 @@ export default function Form() {
       return retObj;
     })
   }
+
+    //Save data to the database
+    function postData(){
+      const dbRef = collection(database,"Job");
+      addDoc(dbRef,userInput).then(alert("Data uploaded successfully")).catch(alert("Error uploading data to the databse"));
+  
+    }
 
 
 
@@ -197,11 +208,37 @@ export default function Form() {
   }
 
 
-  function handleSumbit(){
+  function handleSumbit(event){
+    //Prevent deafult
+    event.preventDefault()
+
     //Clean parsing    
     cleanParsedData("parsedCandidateTask");
     cleanParsedData("parsedBenefits");
     cleanParsedData("parsedJobRequirement");
+
+    let isEmpty = false;
+    setTimeout(()=>{
+      //Check if any data is empty
+      let obKeys = Object.keys(userInput);
+      obKeys.map((key)=>{
+
+        if(userInput[key] == "" || userInput[key] == []){
+          isEmpty = true;
+        }
+      });
+
+
+      //If empty give alert
+      if(isEmpty){
+        alert("Completely fill all of the input box");
+      }
+      else{
+        //Post data to database
+        postData();
+      }
+
+    },1000 )
 
   }
 

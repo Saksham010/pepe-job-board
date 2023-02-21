@@ -6,7 +6,9 @@ import 'winbox/dist/css/winbox.min.css'; // required
 import jobData from "../../jobdata/jobdata.js";
 import WinBox from 'react-winbox';
 import parse from "html-react-parser";
-
+import {database} from "../../firebaseConfig";
+import {collection,doc, getDoc, getDocs} from "firebase/firestore";
+import { useEffect } from "react";
 
 
 export default function Homepage() {
@@ -22,6 +24,19 @@ export default function Homepage() {
     const lastIndex = activePage * recordPerPage;
     const firstIndex = lastIndex - recordPerPage;
     const currentRecords = jobs.slice(firstIndex, lastIndex);
+
+    async function fetchJobData(){
+        const collectionRef = collection(database,"Job");
+        const snapshot = await getDocs(collectionRef);
+        snapshot.docs.map((doc)=>{
+            console.log("Fetched data: ",doc.data());
+        })
+    }
+
+    useEffect(()=>{
+        console.log("Rrunning");
+        fetchJobData();
+    },[])
 
     //Get total number of jobs
     function getTotalJobs() {
