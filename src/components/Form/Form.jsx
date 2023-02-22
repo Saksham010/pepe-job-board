@@ -1,39 +1,15 @@
 import React, { useState } from "react";
 import "./form.css"
-// import Multiselect from "multiselect-react-dropdown";
 import { MultiSelect } from '@mantine/core';
 import { FileInput } from '@mantine/core';
 import { IconUpload } from '@tabler/icons';
 import { useEffect } from "react";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import {  collection, addDoc } from "firebase/firestore";
 import { database } from "../../firebaseConfig";
-
-//  const image_input = document.querySelector('#image_input');
-//  var uploaded_image = '';
-//  image_input.addEventListener('change', function () {
-//    const reader = new FileReader();
-//    reader.addEventListener('load', () => {
-//      uploaded_image = reader.result;
-//      document.querySelector('#display').style.backgroundImage = `url(${uploaded_image}) `
-//    })
-//    reader.readAsDataURL(this.files[0]);
-//  })
+import {MuiBulletedTextArea} from "react-bulleted-textarea";
 
 
 export default function Form() {
-
-  //  function click() {
-  //    var uploaded_image = '';
-  //     const reader = new FileReader();
-  //     reader.addEventListener('load', () => {
-  //      uploaded_image = reader.result;
-  //     //  document.querySelector('#display').style.backgroundImage = `%PUBLIC_URL%/${uploaded_image}`
-  //   })
-  //    reader.readAsDataURL(this.files[0]);
-  //  }
-
-
-
 
   const [userInput, setUserInput] = useState({
     position: "",
@@ -47,12 +23,9 @@ export default function Form() {
     type: "",
     background: "",
     jobDescription:"",
-    candidateTask:"",
-    jobRequirement:"",
-    benefits:"",
-    parsedCandidateTask:"",
-    parsedJobRequirement:"",
-    parsedBenefits:"",
+    candidateTask:[""],
+    jobRequirement:[""],
+    benefits:[""],
     file:"File",
   })
   console.log(userInput);
@@ -74,8 +47,6 @@ export default function Form() {
   
     }
 
-
-
   const options =  [
     { value: 'react', label: 'React' },
     { value: 'ng', label: 'Angular' },
@@ -93,8 +64,6 @@ export default function Form() {
     {value:'', label:''}
   ])
 
-
-
   function handleChange(event) {
     // console.log(event.target.name)
     const type = event.target.name;
@@ -102,144 +71,29 @@ export default function Form() {
     updateState(type, data);
   }
 
-  function handleTextArea(event){
-    const data = event.target.value;
-    const type = event.target.name;
-    const previousLength = userInput[type].length;
-    const bullet = "\u2022";
-    const newLength = event.target.value.length;
-    const characterCode = event.target.value.substr(-1).charCodeAt(0);
-
-    console.log("newlenght: ",newLength);
-    console.log("prevlength: ", previousLength);
-  
-    if (newLength > previousLength) {
-      if (characterCode === 10) {
-        let modifieddata = `${data}${bullet} `
-        updateState(type,modifieddata)
-      } else if (newLength === 1) {
-        let modifieddata = `${bullet} ${data}`;
-        updateState(type,modifieddata);
-      }else{
-        updateState(type,data);
-      }
-    }
-    else{
-      if(newLength === 2){
-        updateState(type,"");
-      }
-      else{
-        updateState(type,data);
-
-      }
-    }
-  }
-
-  useEffect(()=>{
-    parseToJSX();
-
-  },[userInput.jobRequirement, userInput.candidateTask, userInput.benefits]);
-
-  //Function to parsed int jsx
-  function parseToJSX(event){
-    const task = userInput.candidateTask;
-    const benefit = userInput.benefits;
-    const requirement = userInput.jobRequirement;
-
-    //Parsing task
-    let openedtask =  task.replaceAll("\u2022","<li>");
-    let closedtask = openedtask.replaceAll("\n","</li>\n");
-
-    //Parsing benefit
-    let openedbenefit =  benefit.replaceAll("\u2022","<li>");
-    let closedbenefit = openedbenefit.replaceAll("\n","</li>\n");
-
-    //Parsing requirement
-    let openedrequirement =  requirement.replaceAll("\u2022","<li>");
-    let closedrequirement = openedrequirement.replaceAll("\n","</li>\n");
-
-    //Updating state
-    setUserInput(obj=>{
-      return{
-        ...obj,
-        parsedJobRequirement:closedrequirement,
-        parsedBenefits:closedbenefit,
-        parsedCandidateTask:closedtask,
-      }
-    })
-    
-  }
-
-  
-
-  //Function to clean parsed jsx on submit
-  function cleanParsedData(type){
-    const data = userInput[type];
-
-    // case I: if bullet is only left
-    if(data.slice(-5) == "<li> " || data.slice(-5) == "<li>"){
-      const trimmedString = data.slice(0,-5);
-      //Update the parsed String
-      setUserInput(obj=>{
-        let testobj = {...obj,};
-        testobj[type] = trimmedString;
-        return testobj;
-      })
-    }
-    else if(data.slice(-1) == "\n"){
-      const trimmedString = data.slice(0,-1);
-      //Update the parsed String
-      setUserInput(obj=>{
-        let testobj = {...obj,};
-        testobj[type] = trimmedString;
-        return testobj;
-      })
-    }
-    else if(data.slice(-5) != "<li> " && data != ""){
-      const finalString = data.concat("</li>");
-      //Update the parsed String
-      setUserInput(obj=>{
-        let testobj = {...obj,};
-        testobj[type] = finalString;
-        return testobj;
-      })
-    }
-
-  }
-
 
   function handleSumbit(event){
     //Prevent deafult
     event.preventDefault()
 
-    //Clean parsing    
-    cleanParsedData("parsedCandidateTask");
-    cleanParsedData("parsedBenefits");
-    cleanParsedData("parsedJobRequirement");
-
     let isEmpty = false;
-    setTimeout(()=>{
-      //Check if any data is empty
-      let obKeys = Object.keys(userInput);
-      obKeys.map((key)=>{
+    //Check if any data is empty
+    let obKeys = Object.keys(userInput);
+    obKeys.map((key)=>{
 
-        if(userInput[key] == "" || userInput[key] == []){
-          isEmpty = true;
-        }
-      });
-
-
-      //If empty give alert
-      if(isEmpty){
-        alert("Completely fill all of the input box");
+      if(userInput[key] == "" || userInput[key] == []){
+        isEmpty = true;
       }
-      else{
-        //Post data to database
-        postData();
-      }
+    });
 
-    },1000 )
-
+    //If empty give alert
+    if(isEmpty){
+      alert("Completely fill all of the input box");
+    }
+    else{
+      //Post data to database
+      postData();
+    }
   }
 
   return (
@@ -385,19 +239,43 @@ export default function Form() {
             rows="12" name="jobDescription" value={userInput.jobDescription} onChange={handleChange} />
 
           <label className="colour padrem">Candidate's work</label>
-          <textarea className="description description-bullet"
-            placeholder="About what the candidate will do"
-            rows="12" name="candidateTask" value={userInput.candidateTask} onChange={handleTextArea} />
+          <div className="bullet">
+            <MuiBulletedTextArea placeholder="About what candidate will do" values={userInput.candidateTask} onChange={(list)=>{
+              setUserInput(obj=>{
+                return {
+                  ...obj,
+                  candidateTask:list
+                }
+              })
+            }} bulletChar="•" />
+          </div>
           <label className="colour padrem">Requirement</label>
-          <textarea className="description description-bullet"
-            placeholder="About skill requirement"
-            rows="12" name="jobRequirement" value={userInput.jobRequirement} onChange={handleTextArea} />
+          <div className="bullet">
+            <MuiBulletedTextArea placeholder="Add skill requirement" name="jobRequirement" values={userInput.jobRequirement} onChange={(list)=>{
+              setUserInput(obj=>{
+                return {
+                  ...obj,
+                  jobRequirement:list
+                }
+              })
+            }} bulletChar="•" />
+          </div>
           <label className="colour padrem">Benefits</label>
-          <textarea className="description description-bullet"
-            placeholder="About job benefits"
-            rows="12" name="benefits" value={userInput.benefits} onChange={handleTextArea} />
+          <div className="bullet">
+            <MuiBulletedTextArea placeholder="About job benefits" name="benefits" values={userInput.benefits} onChange={(list)=>{
+              setUserInput(obj=>{
+                return {
+                  ...obj,
+                  benefits:list
+                }
+              })
+            }} bulletChar="•" />
+          </div>
+
           <button className="submit" onClick={handleSumbit}>Submit</button>
+
         </div>
+
       </form>
 
     </>

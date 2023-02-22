@@ -5,6 +5,7 @@
 :root {
     --lime: rgb(204,237,126);
     --green: #519202;
+    --border-grey:rgb(118, 118, 118);
   }
 /* var(--lime) */
 .overlay{
@@ -346,6 +347,9 @@
     font-weight: bold;
     
 }
+.mantine-Text-root{
+    color: var(--lime);
+}
 
 
 /* Description bullet */
@@ -355,4 +359,51 @@
 }   
 .description-bullet{
     line-height: 1.8em;
+}
+
+
+/* MUI bulleted */
+.bullet{
+    
+    /* border: 1px red solid; */
+}
+.MuiFormControl-root{
+    width: 100%;
+    display: block ;
+
+}
+.MuiFormControl-root fieldset{
+    border: none;
+}
+
+.MuiInputBase-root{
+    border: 1px var(--border-grey) solid;
+    min-height: 229px;
+    border-radius: 6px;
+}
+
+.MuiInputBase-root:focus-within{
+    border: 1px var(--lime) solid;
+}
+.MuiInputBase-root textarea{
+    color: var(--lime);
+    font-family: 'Press Start 2P';
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    /* border: 1px red solid; */
+    min-height: 229px;
+}
+.MuiInputBase-root p{
+    color: var(--lime);
+    text-align: center;
+    /* border: 1px red solid; */
+}
+
+.MuiInputAdornment-root{
+    min-height: 225px;
+}
+
+/* Label */
+.overlay label{
+    padding-bottom: 1rem;
 }

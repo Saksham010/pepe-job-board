@@ -29,6 +29,7 @@
     "html-react-parser": "^3.0.9",
     "multiselect-react-dropdown": "^2.0.25",
     "react": "^18.2.0",
+    "react-bulleted-textarea": "^1.1.2",
     "react-dom": "^18.2.0",
     "react-router": "^6.8.0",
     "react-router-dom": "^6.8.0",
