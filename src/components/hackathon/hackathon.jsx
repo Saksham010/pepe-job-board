@@ -2,7 +2,15 @@ import "./hackathon.css";
 export default function Hackathon(){
     return (
         <div className="hackathonContainer">
-            <p>Hackathon</p>
+            <div className="hackHeader">
+                <h1>Hackathon</h1>
+            </div>
+
+            <div className="hackContainer">
+                <div className="hacks">
+                    
+                </div>
+            </div>
         </div>
     )
 }

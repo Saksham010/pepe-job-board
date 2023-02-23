@@ -1,3 +1,26 @@
-.hackathonContainer p{
+
+:root {
+    --lime: rgb(204,237,126);
+    --green: #519202;
+    --border-grey:#3c3e4e;
+    --prevborder:#202231;
+    --lightbackground: #333546;
+
+  }
+
+.hackathonContainer h1{
     color: white;
+    text-align: center;
+    color: var(--lime);
+}
+
+.hackathonContainer{
+    /* border: 1px green solid; */
+    border: 1px var(--lightbackground) solid;
+    flex: 1;
+}
+
+.hackHeader{
+    /* border: 1px red solid; */
+    padding-top: 2rem;
 }
