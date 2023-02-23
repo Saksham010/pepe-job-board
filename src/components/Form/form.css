@@ -357,6 +357,9 @@
     display: block;
     padding-top: 2rem;
 }   
+#jobinput #jobD{
+    padding-bottom: 0.1rem;
+}
 .description-bullet{
     line-height: 1.8em;
 }

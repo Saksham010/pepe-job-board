@@ -233,7 +233,7 @@ export default function Form() {
           <textarea className="description description-bullet"
             placeholder="About your company"
             rows="12" name="background" value={userInput.background} onChange={handleChange} />
-          <label className="colour padrem">Job Description</label>
+          <label className="colour padrem" id="jobD">Job Description</label>
           <textarea className="description description-bullet"
             placeholder="About the Job"
             rows="12" name="jobDescription" value={userInput.jobDescription} onChange={handleChange} />
