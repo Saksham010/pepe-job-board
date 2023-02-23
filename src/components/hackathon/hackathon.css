@@ -45,10 +45,15 @@
     /* font-weight: bold; */
     color: rgb(233, 230, 230);
     padding-top: 0.6rem;
+
 }
+
  .statusContainer{
     /* border: 1px red solid; */
-    align-self:flex-end;
+    flex: 1;
+    text-align: right;
+    /* align-self:flex-end; */
+    
 }
 .hacks .hack-status{
     font-size: 0.6em;
@@ -83,6 +88,8 @@
 
 .hack-float{
     display: flex;
+    /* border: 1px red solid; */
+    flex: 1;
 }
 
 .hack-apply{
@@ -92,7 +99,7 @@
 
 }
 .hack-apply button{
-    width: 100%;
+    /* width: 100%; */
     font-family: "Press Start 2P";
     font-size: 0.7em;
     padding: 0.5rem;
@@ -111,7 +118,7 @@
 
 /* Outer hack */
 .hackContainer{
-    padding: 2rem 2rem 0.75vw 2rem;
+    padding: 2rem 2rem 1.5vh 2rem;
     /* padding-top: 2.5rem; */
 }
 

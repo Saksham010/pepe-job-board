@@ -1,32 +1,31 @@
 import "./hackathon.css";
-
+import { Link } from "react-router-dom";
 
 export default function Hackathon(){
-
     const hack = [
     {
-        title:"Filecoin Space Warp",
-        organizer:"EthGlobal",
-        status:"Comming up",
-        url:""
+        title:"Flow Hackathon",
+        organizer:"Flow Network",
+        status:"Ongoing",
+        url:"https://flow-hackathon.devfolio.co/"
+    },
+    {
+        title:"Solana Grizzlython",
+        organizer:"Solana Foundation",
+        status:"Ongoing",
+        url:"https://solana.com/grizzlython"
+    },
+    {
+        title:"Fantom Hackathon Q1",
+        organizer:"Fantom Foundation",
+        status:"Ongoing",
+        url:"https://fantomq12023.devpost.com/?ref_feature=challenge&ref_medium=discover"
     },
     {
         title:"Filecoin Space Warp",
         organizer:"EthGlobal",
         status:"Comming up",
-        url:""
-    },
-    {
-        title:"Filecoin Space Warp",
-        organizer:"EthGlobal",
-        status:"Comming up",
-        url:""
-    },
-    {
-        title:"Filecoin Space Warp",
-        organizer:"EthGlobal",
-        status:"Comming up",
-        url:""
+        url:"https://spacewarp.fvm.dev/"
     }]
 
     const hackathonElement = hack.map((obj,i)=>{
@@ -50,7 +49,11 @@ export default function Hackathon(){
                         <div className="statusContainer">
                             <button className="hack-status">{obj.status}</button>
                             <div className="hack-apply">
-                                <button>Apply</button>
+                                <Link to={{ pathname: obj.url }} target="_blank" >
+
+                                    <button>Apply</button>
+
+                                </Link>
                             </div>
                         </div>
 
