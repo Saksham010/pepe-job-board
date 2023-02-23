@@ -259,6 +259,8 @@ export default function Homepage() {
 
     
 
+    
+
     return (
         <div className="homepage">
 
@@ -333,7 +335,10 @@ export default function Homepage() {
 
                 </div> 
 
-                : <Hackathon/> }
+                : 
+                <Hackathon/> 
+                
+                }
 
         </div>
 

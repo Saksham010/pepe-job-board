@@ -5,6 +5,8 @@
     --border-grey:#3c3e4e;
     --prevborder:#202231;
     --lightbackground: #333546;
+    --yellow: #FFFF5C;
+    --background:#17091F;
 
   }
 
@@ -24,3 +26,125 @@
     /* border: 1px red solid; */
     padding-top: 2rem;
 }
+
+/* Hackathon box */
+
+.hacks{
+    /* border:1px var(--lime) solid; */
+    padding: 1.5rem;
+    color: var(--lime);
+    display:flex;
+    justify-content: space-between;
+}
+.hack-detail{
+    padding: 0.5rem 0 0 0.8rem;
+}
+
+.hack-detail p{
+    font-size: 0.7em;
+    /* font-weight: bold; */
+    color: rgb(233, 230, 230);
+    padding-top: 0.6rem;
+}
+ .statusContainer{
+    /* border: 1px red solid; */
+    align-self:flex-end;
+}
+.hacks .hack-status{
+    font-size: 0.6em;
+    font-family: "Press Start 2P";
+    background-color: #202231;
+    border: 1px #222431 solid;
+    color: var(--lime);
+    padding:0.4rem;
+    /* padding-top: 2rem; */
+    border-left: 20%;
+    /* padding: 0.5rem; */
+    /* background-color: #FFFF5C; */
+    font-weight: bold;
+    
+
+}
+
+.hack-detail .hack-title{
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.hacks .hackImg{
+    /* border: 1px red solid; */
+    /* object-fit: cover; */
+    width: 4.3vw;
+    /* padding: 20rem; */
+}
+.hacks .hackImg img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.hack-float{
+    display: flex;
+}
+
+.hack-apply{
+    /* border: 1px red solid; */
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+
+}
+.hack-apply button{
+    width: 100%;
+    font-family: "Press Start 2P";
+    font-size: 0.7em;
+    padding: 0.5rem;
+    /* width: 100%; */
+    text-align: center;
+    border: none;
+    background-color: var(--background);
+    border: 1px var(--lime) solid; 
+    color: var(--yellow);
+    color: var(--lime);
+}
+.hack-apply button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* Outer hack */
+.hackContainer{
+    padding: 2rem 2rem 0.75vw 2rem;
+    /* padding-top: 2.5rem; */
+}
+
+
+.hack-outer{
+    /* border: 1px var(--yellow) solid; */
+}
+
+.hack-inner{
+    /* cursor: pointer; */
+    position: relative;
+    touch-action: manipulation;
+    z-index: 1;
+    background-color: var(--lime);
+}
+.hack-inner:after{
+    content: '';
+    border:1px var(--lime) solid;
+    background-color: var(--background);
+
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    transition: 0.4s;
+    height: 130px;
+}
+.hack-inner:hover:after{
+
+    bottom: 0px;
+    right: 0px
+}
+
+
+
