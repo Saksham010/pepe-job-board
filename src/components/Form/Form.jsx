@@ -5,11 +5,16 @@ import { FileInput } from '@mantine/core';
 import { IconUpload } from '@tabler/icons';
 import { useEffect } from "react";
 import {  collection, addDoc } from "firebase/firestore";
-import { database } from "../../firebaseConfig";
+import { database,storage } from "../../firebaseConfig";
 import {MuiBulletedTextArea} from "react-bulleted-textarea";
-
+import {ref,uploadBytesResumable,getDownloadURL} from "firebase/storage"
 
 export default function Form() {
+
+  const[percent,setPercent] = useState(0);
+  console.log("Upload progress: ",percent);
+
+  const [file,setFile] = useState(null);
 
   const [userInput, setUserInput] = useState({
     position: "",
@@ -26,7 +31,8 @@ export default function Form() {
     candidateTask:[""],
     jobRequirement:[""],
     benefits:[""],
-    file:"File",
+    fileUrl:"File",
+    applyUrl:""
   })
   console.log(userInput);
 
@@ -41,10 +47,20 @@ export default function Form() {
   }
 
     //Save data to the database
-    function postData(){
+    function postData(url){
+      const data = userInput;
+      //Updating file url if not updated
+      data["fileUrl"] = url;
       const dbRef = collection(database,"Job");
-      addDoc(dbRef,userInput).then(alert("Data uploaded successfully")).catch(alert("Error uploading data to the databse"));
-  
+
+      try{
+        addDoc(dbRef,data).then(()=>{
+          alert("Data uploaded successfully");
+        })
+
+      }catch(err){
+        console.log("Error uploading data to database: ",err);
+      }  
     }
 
   const options =  [
@@ -91,10 +107,33 @@ export default function Form() {
       alert("Completely fill all of the input box");
     }
     else{
-      //Post data to database
-      postData();
+      const storageRef = ref(storage,`/files/${file.name}`);
+      const uploadTask = uploadBytesResumable(storageRef,file);
+      uploadTask.on("state_changed",(snapshot) => {
+          const percent = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+          //Update progress
+          setPercent(percent);
+        },(err) => console.log(err),() => {
+            // download url
+            getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+
+            //Updating state
+            setUserInput(obj=>{
+              return{
+                ...obj,
+                fileUrl: url
+              }
+            });
+            //Post data to database
+            postData(url)
+            });
+          }
+      ); 
+
     }
   }
+
+  console.log("User input: ",userInput);
 
   return (
     <>
@@ -197,6 +236,13 @@ export default function Form() {
         </div>
 
         <div className="inside">
+          <label className="colour">Application Url</label>
+          <input className="form-location" name="applyUrl" value={userInput.applyUrl} onChange={handleChange}
+            type='text'
+            placeholder="Your link" />
+        </div>
+
+        <div className="inside">
           <label className="colour">Type</label>
           <select className="type" onChange={handleChange} name="type">
             <option value="Job">Job</option>
@@ -212,16 +258,17 @@ export default function Form() {
           label="Logo"
           placeholder="Choose a picture" 
           icon={<IconUpload size={14} />} 
-          value={userInput.file}
+          value={file}
 
           onChange={(selectedFile)=>{
             //Updating  user Input
-            setUserInput(obj=>{
-              return{
-                ...obj,
-                file: selectedFile
-              }
-            });
+            setFile(selectedFile)
+            // setUserInput(obj=>{
+            //   return{
+            //     ...obj,
+            //     file: selectedFile
+            //   }
+            // });
           }}      
           />
         </div>

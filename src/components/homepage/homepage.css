@@ -77,10 +77,11 @@
 
 .job-logo{
     /* border: 1px green solid; */
-    width: 10%;
+    width: 4.1vw;
 }
 
 .job-logo img{
+    /* border: 1px green solid; */
     width: 100%;
     border-radius: 4px;
 }
