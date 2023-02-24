@@ -1,7 +1,14 @@
 import "./hackathon.css";
 import { Link } from "react-router-dom";
+import { Pagination } from '@mantine/core';
+import { useState } from "react";
+
+
 
 export default function Hackathon(){
+    const [activePage, setPage] = useState(1);
+    const [recordPerPage, setRecordPerPage] = useState(4);
+
     const hack = [
     {
         title:"Flow Hackathon",
@@ -33,7 +40,11 @@ export default function Hackathon(){
         imgPath:"https://firebasestorage.googleapis.com/v0/b/remotepepejobs.appspot.com/o/files%2FfilecoinHack.png?alt=media&token=30908bd2-001d-413d-89fa-446b93099fa9"
     }]
 
-    const hackathonElement = hack.map((obj,i)=>{
+    const lastIndex = activePage * recordPerPage;
+    const firstIndex = lastIndex - recordPerPage;
+    const currentRecords = hack.slice(firstIndex, lastIndex);
+
+    const hackathonElement = currentRecords.map((obj,i)=>{
         return(
             <div className="hackContainer" key={i}>
                 <div className="hack-inner">
@@ -69,13 +80,34 @@ export default function Hackathon(){
         )
 
     })
+    //Get total number of hackathons
+    function getTotalHackathons() {
+
+        let count = 0;
+        hack.map(obj => {
+            count++;
+
+        })
+        return count;
+    }
     return (
         <div className="hackathonContainer">
-            <div className="hackHeader">
-                <h1>Hackathon</h1>
-            </div>
+            <div className="hackathoninner">
 
-            {hackathonElement}
+                <div className="hackHeader">
+                    <h1>Hackathon</h1>
+                </div>
+
+                {hackathonElement}
+                <div className="paginationContainer" >
+
+                    <Pagination page={activePage} onChange={(pageNumber) => {
+                            setPage(pageNumber);
+                        }} total={Math.ceil(getTotalHackathons() / 5)}
+                            color="dark"
+                            position="center" />
+                </div>
+            </div>
         </div>
     )
 }

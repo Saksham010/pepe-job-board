@@ -185,7 +185,6 @@ export default function Homepage() {
         if(position != ""){
 
             return (
-
                 <>
 
                     <div className="job-box" key={index} onClick={() => {
@@ -228,9 +227,8 @@ export default function Homepage() {
                         </div>
                     </div>
                     {showWinbox({ position, company, location, background, jobDescription, candidateTask, jobRequirement, benefits, minimumSalary, maximumSalary, applyUrl }, index)}
-
-
                 </>
+
             );
         }
         else{
@@ -245,10 +243,10 @@ export default function Homepage() {
     const content = currentRecords.map((obj, i) => {
 
         return (
-            <>
+            <div className="job-each">
                 {element(obj, i)}
-                <br />
-            </>
+                {/* <br /> */}
+            </div>
         )
     })
     console.log(activePage);
@@ -283,24 +281,23 @@ export default function Homepage() {
         window.open(link)
     }
 
-    
-
-    
-
     return (
         <div className="homepage">
 
             <div className="job-container ">
+                <div className="job-main">
 
-                {content}
+                    {content}
 
-                <Pagination page={activePage} onChange={(pageNumber) => {
-                    setPage(pageNumber);
-                    //Close opened box
-                    closeBox();
-                }} total={Math.ceil(getTotalJobs() / 5)}
-                    color="dark"
-                    position="center" />
+                    <Pagination page={activePage} onChange={(pageNumber) => {
+                        setPage(pageNumber);
+                        //Close opened box
+                        closeBox();
+                    }} total={Math.ceil(getTotalJobs() / 5)}
+                        color="dark"
+                        position="center" />
+                </div>
+
             </div>
 
 

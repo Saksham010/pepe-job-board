@@ -20,12 +20,19 @@
     /* border: 1px green solid; */
     border: 1px var(--lightbackground) solid;
     flex: 1;
+    /* width: 50%; */
 }
 
 .hackHeader{
     /* border: 1px red solid; */
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
 }
+.hackathoninner{
+    /* border: 1px red solid; */
+    height: 100%;
+    padding: 2rem 0 2rem 0 ;
+}
+
 
 /* Hackathon box */
 
@@ -38,6 +45,8 @@
 }
 .hack-detail{
     padding: 0.5rem 0 0 0.8rem;
+    /* border: 1px yellow solid; */
+    flex: 4;
 }
 
 .hack-detail p{
@@ -50,7 +59,7 @@
 
  .statusContainer{
     /* border: 1px red solid; */
-    flex: 1;
+    flex: 0.5;
     text-align: right;
     /* align-self:flex-end; */
     
@@ -77,8 +86,9 @@
 }
 .hacks .hackImg{
     /* border: 1px red solid; */
+    flex: 0.55;
     /* object-fit: cover; */
-    width: 4.2vw;
+    /* width: 4.2vw; */
     /* padding: 20rem; */
 }
 .hacks .hackImg img{
@@ -89,7 +99,9 @@
 .hack-float{
     display: flex;
     /* border: 1px red solid; */
-    flex: 1;
+    flex: 3;
+    /* width: ; */
+    
 }
 
 .hack-apply{
@@ -133,6 +145,7 @@
     touch-action: manipulation;
     z-index: 1;
     background-color: var(--lime);
+  
 }
 .hack-inner:after{
     content: '';
@@ -153,5 +166,14 @@
     right: 0px
 }
 
+
+/* Pagination hide */
+.paginationContainer{
+    padding-top: 1rem;
+    /* display: hidden; */
+    /* opacity: 0; */
+    /* cursor: none; */
+    
+}
 
 
