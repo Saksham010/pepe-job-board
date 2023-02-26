@@ -277,21 +277,87 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .buttonn{
-    
 color: var(--lime);
-width: 100%; 
+display: grid;
+row-gap: 2rem;
 padding-top: 40px;
 padding-bottom: 40px;
+}
 
+.btn_10{
+    display: inline-block;
+}
+.btn_11{
+    display: grid;
+    row-gap: 2rem;
 }
 
 
 
-.b1{
-   width: 93%;
-   padding-left: 320px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .b1{
+   /* width: 93%; */
+
+/* 
 .buttonn1{
 /* margin: 6px; 
 width: 31% ;
@@ -306,7 +372,7 @@ padding: 3vh;
     font-family: 'Press Start 2P';
     margin: 15px 6px; */
 
-    font-family: 'Press Start 2P';
+    /* font-family: 'Press Start 2P';
     font-size: 0.6em;
     padding: 0.7rem;
     color: #FFFF5C;
@@ -314,24 +380,23 @@ padding: 3vh;
     background: var(--background);
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
-    width: 33%;
-    margin: 30px;
-}
+    /* width: 33%; */
 
+/* 
 .buttonn1:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
-}
+} */
 
 
 
-.b2{
+/* .b2{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-    gap: 10px;
-}
 
+    gap: 10px;
+} */
+/* 
 .buttonn2{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
@@ -341,29 +406,28 @@ padding: 3vh;
     background: var(--background);
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
-    width: 100%;
-}
 
+} */
+/* 
 .buttonn2:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
-}
-
+} */
+/* 
 .buttonn3{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
-    /* padding: 0.7rem; */
     color: #FFFF5C;
     color: var(--lime);
     background: var(--background);
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
-    width: 100%;
+
     text-align: center;
     padding: 10px;
-}
+} */
 
-.buttonn3:hover{
+/* .buttonn3:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
 }
@@ -371,68 +435,68 @@ padding: 3vh;
 .buttonn4{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
-    /* padding: 0.7rem; */
+
     color: #FFFF5C;
     color: var(--lime);
     background: var(--background);
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
-    width: 100%;
+
     text-align: center;
     padding: 10px;
-}
-
+} */
+/* 
 .buttonn4:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
-}
+} */
 
 
-.buttonn5{
+/* .buttonn5{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
-    /* padding: 0.7rem; */
+
     color: #FFFF5C;
     color: var(--lime);
     background: var(--background);
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
-    width: 100%;
+
     text-align: center;
     padding: 10px;
-}
+} */
 
-.buttonn5:hover{
+/* .buttonn5:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
-}
+} */
 
-.buttonn6{
+/* .buttonn6{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
-    /* padding: 0.7rem; */
+
     color: #FFFF5C;
     color: var(--lime);
     background: var(--background);
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
-    width: 100%;
+
     text-align: center;
     padding: 10px;
-}
-
+} */
+/* 
 .buttonn6:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
 }
+ */
 
-
-
+/* 
 .b3{
     width: 93%;
    padding-left: 320px;
-}
-.buttonn7{
+} */
+/* .buttonn7{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
     padding: 0.7rem; 
@@ -441,19 +505,19 @@ padding: 3vh;
     background: var(--background);
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
-    width: 33%;
+    
     margin: 30px; 
-}
-
+} */
+/* 
 .buttonn7:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
-}
+} */
 
 
 
-.b4{
-    width: 97%;
+/* .b4{
+
    padding-left: 350px;
 }
 
@@ -466,7 +530,7 @@ padding: 3vh;
     background: var(--background);
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
-    width: 33%;
+
    
 }
 
@@ -478,14 +542,14 @@ padding: 3vh;
 
 
 .bb1{
-    width: 98vw;
+  
     flex-direction: row;
     flex-wrap: wrap;
     display: flex; 
-}
+} */
 
-.b5{
-    width: 24vw;
+/* .b5{
+    
     float: left;
 }
 
@@ -512,10 +576,10 @@ padding: 3vh;
 .b6{
     
     float: right;
-    width: 24vw;
-}
+    
+} */
 
-
+/* 
 .buttonn10{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
@@ -526,11 +590,10 @@ padding: 3vh;
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
     margin: 30px; 
-    width: 35%;
     margin-left: 70px;
-}
+} */
 
-.buttonn10:hover{
+/* .buttonn10:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
 }
@@ -541,14 +604,14 @@ padding: 3vh;
     flex-direction: row;
     flex-wrap: wrap;
     display: flex; 
-}
+} */
 
-.b7{
-    width: 31%;
+/* .b7{
+
     float: left;
-}
+} */
 
-.buttonn11{
+/* .buttonn11{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
     padding: 0.7rem;
@@ -565,11 +628,11 @@ padding: 3vh;
 }
 
 .b8{
-    width: 31%;
+
     float: left;
     padding-left: 55px;
-}
-
+} */
+/* 
 .buttonn12{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
@@ -585,7 +648,34 @@ padding: 3vh;
 .buttonn12:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
-}
+} */
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .pg{
     width: 50vw;

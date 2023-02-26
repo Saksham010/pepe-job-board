@@ -6,8 +6,8 @@ import 'winbox/dist/css/winbox.min.css'; // required
 import jobData from "../../jobdata/jobdata.js";
 import WinBox from 'react-winbox';
 import parse from "html-react-parser";
-import {database} from "../../firebaseConfig";
-import {collection,doc, getDoc, getDocs} from "firebase/firestore";
+import { database } from "../../firebaseConfig";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import Hackathon from "../hackathon/hackathon";
@@ -19,12 +19,12 @@ export default function Homepage() {
     const ref = useRef();
     //Content wise path
     let location = useLocation();
-    const [path,setPath] = useState("/");
+    const [path, setPath] = useState("/");
 
-    useEffect(()=>{
+    useEffect(() => {
         // console.log("Updated path: ", location.pathname);
         setPath(location.pathname)
-    },[location])
+    }, [location])
 
     //Pagination
     const [activePage, setPage] = useState(1);
@@ -35,25 +35,25 @@ export default function Homepage() {
     const lastIndex = activePage * recordPerPage;
     const firstIndex = lastIndex - recordPerPage;
     const currentRecords = jobs.slice(firstIndex, lastIndex);
-    
 
-    async function fetchJobData(){
-        const collectionRef = collection(database,"Job");
+
+    async function fetchJobData() {
+        const collectionRef = collection(database, "Job");
         const snapshot = await getDocs(collectionRef);
 
-        snapshot.docs.map((doc)=>{
-            setJobs(prevarr=>{
+        snapshot.docs.map((doc) => {
+            setJobs(prevarr => {
                 const fetchedDoc = doc.data();
                 return [...prevarr, fetchedDoc]
             })
-            console.log("Fetched data: ",doc.data());
+            console.log("Fetched data: ", doc.data());
         })
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log("Rrunning");
         fetchJobData();
-    },[])
+    }, [])
 
     //Get total number of jobs
     function getTotalJobs() {
@@ -84,8 +84,8 @@ export default function Homepage() {
 
     }
 
-    function listParser(jobArr){
-        let parsedList = jobArr.map((item)=>{
+    function listParser(jobArr) {
+        let parsedList = jobArr.map((item) => {
             let bulletItem = '<li>' + item + '</li>';
             return parse(bulletItem)
         })
@@ -140,13 +140,13 @@ export default function Homepage() {
                                             <p>{data.jobDescription}</p>
                                         </div>
 
-                                        {data.candidateTask[0] == "null"?<></>:
+                                        {data.candidateTask[0] == "null" ? <></> :
                                             <div className="detailbox bullet">
 
                                                 <h1>What you'll do: </h1>
                                                 <p><ul>{listParser(data.candidateTask)}</ul></p>
                                             </div>
-                                        }   
+                                        }
                                         <div className="detailbox bullet">
                                             <h1>Requirement: </h1>
                                             <p><ul>{listParser(data.jobRequirement)}</ul></p>
@@ -161,9 +161,9 @@ export default function Homepage() {
                                     </div>
 
                                     <div className="applybutton">
-                                    <Link to={{ pathname: data.applyUrl }} target="_blank" >
-                                        <button>Apply</button>
-                                    </Link>
+                                        <Link to={{ pathname: data.applyUrl }} target="_blank" >
+                                            <button>Apply</button>
+                                        </Link>
                                     </div>
                                     <br />
                                 </div>
@@ -182,7 +182,7 @@ export default function Homepage() {
     function element(currentData, index) {
 
         const { position, company, fileUrl, location, background, jobDescription, candidateTask, jobRequirement, benefits, minimumSalary, maximumSalary, applyUrl } = currentData;
-        if(position != ""){
+        if (position != "") {
 
             return (
                 <>
@@ -231,8 +231,8 @@ export default function Homepage() {
 
             );
         }
-        else{
-            return(
+        else {
+            return (
                 <></>
             )
         }
@@ -301,69 +301,39 @@ export default function Homepage() {
             </div>
 
 
-             {path == '/internship'?
-   
+            {path == '/internship' ?
+
                 <div className="Box">
                     <div className="jobb">
                         <div className="container_1">
-                            {<h1 className="jobb_heading">Can't find the job you want ?</h1> }
+                            {<h1 className="jobb_heading">Can't find the job you want ?</h1>}
                             <span className="jobb_span">
                                 Check out these job portal.
                             </span>
                         </div>
                     </div>
                     <div className=" buttonn">
-
-                        <div className="b1">
-                            <button name="workOS" className="buttonn1" onClick={handleClick}>WorkOS</button>
+                        <button name="workOS" className="workOS" onClick={handleClick}>WorkOS</button>
+                        <div className="btn_10">
+                            <button name="web3_Jobs" onClick={handleClick}>web3_Jobs</button>
+                            <button name="hustleverse" onClick={handleClick}>Hustleverse</button>
+                            <button name="Hunted" onClick={handleClick}>Hunted</button>
+                            <button name=" Web3_army" onClick={handleClick}> Web3_Army</button>
+                            <button name="Aworker" onClick={handleClick}>Aworker</button>
                         </div>
-
-                        <div className="b2">
-                            <button name="web3_Jobs" className="buttonn2" onClick={handleClick}>web3_Jobs</button>
-                            <button name="hustleverse" className="buttonn3" onClick={handleClick}>Hustleverse</button>
-                            <button name="Hunted" className="buttonn4" onClick={handleClick}>Hunted</button>
-                            <button name=" Web3_army" className="buttonn5" onClick={handleClick}> Web3_Army</button>
-                            <button name="Aworker" className="buttonn6" onClick={handleClick}>Aworker</button>
+                        <div className="btn_11">
+                            <button name="seaLaunch" onClick={handleClick}>SeaLaunch</button>
+                            <button name="candena" onClick={handleClick}>Candena</button>
                         </div>
-
-                        <div className="b3">
-                            <button name="seaLaunch" className="buttonn7" onClick={handleClick}>SeaLaunch</button>
-                        </div>
-
-                        <div className="b4">
-                            <button name="candena" className="buttonn8" onClick={handleClick}>Candena</button>
-                        </div>
-                        
-                        <div className="bb1">
-                            <div className="b5">
-                                <button name=" crypto_Jobs" className="buttonn9" onClick={handleClick}> Crypto_Jobs</button>
-                            </div>
-
-                            <div className="b6">
-                                <button name="New_grad" className="buttonn10" onClick={handleClick}>New_Grad</button>
-                            </div>
-                        </div>
-
-                        <div className="bb2">
-                            <div className="b7">
-                                <button name=" job_hunt_stack" className="buttonn11" onClick={handleClick}> Job_Hunt_Stack</button>
-                            </div>
-
-                            <div className="b8">
-                                <button name="Crypto_jobs_list" className="buttonn12" onClick={handleClick}>Crypto_Jobs_List</button>
-                            </div>
-                        </div>
-
+                        <button name=" crypto_Jobs" onClick={handleClick}> Crypto_Jobs</button>
+                        <button name="New_grad" onClick={handleClick}>New_Grad</button>
+                        <button name=" job_hunt_stack" onClick={handleClick}> Job_Hunt_Stack</button>
+                        <button name="Crypto_jobs_list" onClick={handleClick}>Crypto_Jobs_List</button>
                     </div>
-
-                </div> 
-
-                : 
-                <Hackathon/> 
-                
-                }
-
-        </div>
-
+                </div>
+                :
+                <Hackathon />
+            }
+        </div >
     )
 }
