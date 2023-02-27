@@ -32,10 +32,10 @@
     /* border: 1px red solid; */
     padding-bottom: 1rem;
 }
-.indieJobBox{
-    /* border: 1px red solid; */
-    /* padding: 1.7rem; */
-}
+/* .indieJobBox{
+     border: 1px red solid; 
+     padding: 1.7rem; 
+} */
 .job-main{
     /* border:1px red solid; */
     height: 100%;
@@ -297,27 +297,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 .buttonn{
 color: var(--lime);
 display: grid;
@@ -326,22 +306,241 @@ padding-top: 40px;
 padding-bottom: 40px;
 }
 
-.btn_10{
+.btn_1{
+    padding-left: 18.1rem;
+}
+
+.b1{
+    width: 30%;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+}
+
+.b1:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
+
+.btn_2{
     display: inline-block;
 }
-.btn_11{
-    display: grid;
-    row-gap: 2rem;
+
+.b2{
+    width: 18%;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+    margin-left: 17px;
 }
 
+.b2:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
 
+.b3{
+    width: 18%;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+    margin-left: 17px;
+}
 
+.b3:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+} 
 
+.b4{
+    width: 18%;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+    margin-left: 17px;
+}
 
+.b4:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
 
+.b5{
+    width: 18%;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+    margin-left: 17px;
+}
 
+.b5:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
 
+.b6{
+    width: 18%;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+    margin-left: 17px;
+}
 
+.b6:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
+
+.btn_3{
+    display: grid;
+    row-gap: 2rem;
+    padding-left: 18.1rem;
+    width: 30%;
+}  
+ 
+.b7{
+    width: 112%;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+}
+
+.b7:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
+
+.b8{
+    width: 112%;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+}
+
+.b8:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
+
+.btn_4{
+    display: inline-block;
+}
+
+.b9{
+    width: 20%;
+    float: left;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+    margin-left: 8.6rem;
+}
+
+.b9:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
+
+.b10{
+    width: 18%;
+    float: right;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+    margin-right: 8.6rem;
+}
+
+.b10:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
+
+.btn_5{
+    display: inline-block;
+}
+
+.b11{
+    float: left;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+}
+
+.b11:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
+
+.b12{
+    float: right;
+    font-family: 'Press Start 2P';
+    font-size: 0.6em;
+    padding: 0.7rem;
+    color: #FFFF5C;
+    color: var(--lime);
+    background: var(--background);
+    border: 1px var(--bordercolor) solid;
+    cursor: pointer;
+}
+
+.b12:hover{
+    border: 0.7px var(--lime) solid;
+    cursor: pointer;
+}
 
 
 
@@ -632,7 +831,8 @@ padding: 3vh;
     float: left;
     padding-left: 55px;
 } */
-/* 
+ 
+/*
 .buttonn12{
     font-family: 'Press Start 2P';
     font-size: 0.6em;
@@ -648,8 +848,8 @@ padding: 3vh;
 .buttonn12:hover{
     border: 0.7px var(--lime) solid;
     cursor: pointer;
-} */
-
+} 
+*/
  
 
 
@@ -677,10 +877,10 @@ padding: 3vh;
 
 
 
-.pg{
+/* .pg{
     width: 50vw;
     padding: 3vh;
     padding-left: 330px;
     padding-top: 130px;
 
-}
+} */
