@@ -315,28 +315,18 @@ export default function Homepage() {
 
 
                     <div className=" buttonn">
-                        <div className="btn_1">
-                            <button name="workOS" className="b1" onClick={handleClick}>WorkOS</button>
-                        </div>
-                        <div className="btn_2">
-                            <button name="web3_Jobs" className="b2" onClick={handleClick}>web3_Jobs</button>
-                            <button name="hustleverse" className="b3" onClick={handleClick}>Hustleverse</button>
-                            <button name="Hunted" className="b4" onClick={handleClick}>Hunted</button>
-                            <button name=" Web3_army" className="b5" onClick={handleClick}> Web3_Army</button>
-                            <button name="Aworker" className="b6" onClick={handleClick}>Aworker</button>
-                        </div>
-                        <div className="btn_3">
-                            <button name="seaLaunch" className="b7" onClick={handleClick}>SeaLaunch</button>
-                            <button name="candena" className="b8" onClick={handleClick}>Candena</button>
-                        </div>
-                        <div className="btn_4">
-                            <button name=" crypto_Jobs" className="b9" onClick={handleClick}> Crypto_Jobs</button>
-                            <button name="New_grad" className="b10" onClick={handleClick}>New_Grad</button>
-                        </div>
-                        <div className="btn_5">
-                            <button name=" job_hunt_stack" className="b11" onClick={handleClick}> Job_Hunt_Stack</button>
-                            <button name="Crypto_jobs_list" className="b12" onClick={handleClick}>Crypto_Jobs_List</button>
-                        </div>
+                        <button name="workOS" className="button-52" onClick={handleClick}>WorkOS</button>
+                        <button name="web3_Jobs" className="button-52" onClick={handleClick}>web3_Jobs</button>
+                        <button name="hustleverse" className="button-52" onClick={handleClick}>Hustleverse</button>
+                        <button name="Hunted" className="button-52" onClick={handleClick}>Hunted</button>
+                        <button name=" Web3_army" className="button-52" onClick={handleClick}> Web3_Army</button>
+                        <button name="Aworker" className="button-52" onClick={handleClick}>Aworker</button>
+                        <button name="seaLaunch" className="button-52" onClick={handleClick}>SeaLaunch</button>
+                        <button name="candena" className="button-52" onClick={handleClick}>Candena</button>
+                        <button name=" crypto_Jobs" className="button-52" onClick={handleClick}> Crypto_Jobs</button>
+                        <button name="New_grad" className="button-52" onClick={handleClick}>New_Grad</button>
+                        <button name=" job_hunt_stack" className="button-52" onClick={handleClick}> Job_Hunt_Stack</button>
+                        <button name="Crypto_jobs_list" className="button-52" onClick={handleClick}>Crypto_Jobs_List</button>
                     </div>
                 </div>
                 :

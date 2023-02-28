@@ -1,21 +1,21 @@
-.homepage{
+.homepage {
     padding-top: 5vw;
-    margin: auto;
-    width: 98vw;
-    /* flex-wrap: wrap; */
-    display: flex; 
+    width: 95vw;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 :root {
-    --lime: rgb(204,237,126);
+    --lime: rgb(204, 237, 126);
     --green: #519202;
     --background: #17091F;
     --lightbackground: #333546;
-    --prevborder:#202231;
-    --bordercolor:#3c3e4e;
-  }
+    --prevborder: #202231;
+    --bordercolor: #3c3e4e;
+}
 
-.job-container{
+.job-container {
     /* margin: auto; */
     border: 1px #333546 solid;
     border-radius: 6px;
@@ -25,18 +25,21 @@
     padding: 1.7rem;
 
 }
-.job-container:hover{
+
+.job-container:hover {
     border-color: #3c3e4e;
 }
-.job-each{
+
+.job-each {
     /* border: 1px red solid; */
     padding-bottom: 1rem;
 }
+
 /* .indieJobBox{
      border: 1px red solid; 
      padding: 1.7rem; 
 } */
-.job-main{
+.job-main {
     /* border:1px red solid; */
     height: 100%;
     display: flex;
@@ -44,10 +47,10 @@
     justify-content: space-between;
 }
 
-.job-box{
+.job-box {
     /* border: 1px blue solid; */
     /* padding: 3vh; */
-
+    flex: 1 1;
     padding: 1.7em;
     color: var(--lime);
     display: flex;
@@ -57,76 +60,84 @@
     /* border: 2px #519202 dotted; */
     border: 1px #3c3e4e solid;
     /* border: 1px  solid; */
-    border-radius: 5px;    
+    border-radius: 5px;
 }
-.job-box:hover{
+
+.job-box:hover {
     border: 0.7px var(--lime) solid;
     cursor: pointer;
 }
 
-.job-info{
+.job-info {
     display: flex;
     flex-direction: column;
     /* border: 1px palevioletred solid; */
     padding-left: 0.6em;
 
 }
-.job-test{
+
+.job-test {
     border: 1px red solid;
 }
-.title{
-    padding-top:0.6rem;
+
+.title {
+    padding-top: 0.6rem;
 }
-.title span{
+
+.title span {
     font-size: 0.9em;
     font-weight: bold;
 }
-.company{
+
+.company {
     padding-top: 0.24rem;
 }
-.company span{
+
+.company span {
     font-size: 0.7em;
     color: rgb(233, 230, 230);
 }
-.job-first{
+
+.job-first {
     width: 100%;
     display: flex;
     /* border: 1px yellow solid; */
     justify-content: flex-start;
 }
 
-.job-logo{
+.job-logo {
     /* border: 1px green solid; */
     flex: 1;
 }
 
-.job-logo img{
+.job-logo img {
     /* border: 1px green solid; */
     width: 100%;
     border-radius: 4px;
 }
 
 
-.job-info{
+.job-info {
     flex: 9;
 }
 
 /* Drag */
-.wb-body{
+.wb-body {
     border: 1px var(--lightbackground) solid;
 
 }
-.wb-drag{
+
+.wb-drag {
     background-color: var(--lime);
 }
 
-.wb-title{
+.wb-title {
     color: black;
     font-family: 'Press Start 2P' !important;
 
 }
 
-.wb-body{
+.wb-body {
     padding: 1rem;
     color: var(--lime);
     background: var(--background) !important;
@@ -134,61 +145,64 @@
 
 
 /* Pagination css */
-.mantine-Pagination-item{
+.mantine-Pagination-item {
     /* color: var(--lime); */
     background-color: #25262b;
     color: white;
     border: none;
-    border:1px var(--lightbackground) solid;
+    border: 1px var(--lightbackground) solid;
 }
+
 /* Active button */
-.mantine-1l286fk[data-active]{
+.mantine-1l286fk[data-active] {
     color: var(--lime);
 }
 
 
 /* Winbox content design */
-.winboxContent h1{
+.winboxContent h1 {
     font-size: 1rem;
     color: var(--lime);
     /* color: yellowgreen; */
-    
+
 }
-.winboxContent h5{
+
+.winboxContent h5 {
     font-weight: normal;
     font-size: 0.7em;
     /* color: yellow; */
     color: #FFFF5C;
 }
-.winboxContent .job-upper{
+
+.winboxContent .job-upper {
     padding: 1rem 0 0.5rem 1rem;
     /* border: 1px blue solid; */
 }
 
 
-.winboxContent .job-lower{
+.winboxContent .job-lower {
     padding: 0.3rem 1rem;
 }
 
-.winboxContent .job-location{
+.winboxContent .job-location {
     padding-bottom: 0.5rem;
 }
 
 
 .jobdetail .detailbox {
     /* border: 1px red solid; */
-    padding:1rem;
+    padding: 1rem;
 }
 
 
-.jobdetail .detailbox h1{
+.jobdetail .detailbox h1 {
     /* border: 1px red solid; */
     padding-bottom: 0.9rem;
 }
 
 
 
-.jobdetail .detailbox p{
+.jobdetail .detailbox p {
     font-size: 0.7em;
     line-height: 1.9em;
     font-weight: bold;
@@ -197,23 +211,25 @@
 }
 
 
-.jobdetail li::marker{
+.jobdetail li::marker {
     font-size: 2em;
     border: 1px red solid;
 
 }
-.jobdetail .bullet p{
+
+.jobdetail .bullet p {
     padding-left: 1.3rem;
 }
 
 /* Apply button */
-.winboxContent .applybutton{
+.winboxContent .applybutton {
 
     /* padding-left: 1rem; */
     padding-right: 1rem;
     text-align: right;
 }
-.winboxContent .applybutton button{
+
+.winboxContent .applybutton button {
     /* padding: 1rem; */
     /* text-align: center; */
     font-family: 'Press Start 2P';
@@ -225,662 +241,97 @@
     border: 1px var(--bordercolor) solid;
     cursor: pointer;
 }
-.winboxContent .applybutton button:hover{
+
+.winboxContent .applybutton button:hover {
     opacity: 0.9;
 }
 
-/* .hackathonBox{
-    border: 1px red solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-} */
 
 
 
-
-
-/* Internship location box */
-.Box{
+.Box {
     border: 1px #333546 solid;
     border-radius: 6px;
-    width: 48vw;
-    padding: 3vh;
-    float: right;
+    flex: 1 1;
+    padding: 1.7rem;
+
 }
 
-
-.jobb{
+.jobb {
     display: flex;
-     padding: 3vh;
-     color: var(--lime);
-     justify-content: space-between;
-     align-items: center;
-     background-color: var(--background);
-     border: 1px #3c3e4e solid;
-     border-radius: 5px;
-}
-
-
-.jobb_heading{
-    color: var(--lime);
-    font-size: 18px;
-    padding-bottom: 22px;
-     padding-left: 100px; 
-}
-
-.jobb_span{
-    color: var(--lime);
-    font-size: 18px;
-     padding-left: 115px; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-.buttonn{
-color: var(--lime);
-display: grid;
-row-gap: 2rem;
-padding-top: 40px;
-padding-bottom: 40px;
-}
-
-.btn_1{
-    padding-left: 18.1rem;
-}
-
-.b1{
-    width: 30%;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-}
-
-.b1:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.btn_2{
-    display: inline-block;
-}
-
-.b2{
-    width: 18%;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin-left: 17px;
-}
-
-.b2:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.b3{
-    width: 18%;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin-left: 17px;
-}
-
-.b3:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-} 
-
-.b4{
-    width: 18%;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin-left: 17px;
-}
-
-.b4:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.b5{
-    width: 18%;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin-left: 17px;
-}
-
-.b5:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.b6{
-    width: 18%;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin-left: 17px;
-}
-
-.b6:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.btn_3{
-    display: grid;
-    row-gap: 2rem;
-    padding-left: 18.1rem;
-    width: 30%;
-}  
- 
-.b7{
-    width: 112%;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-}
-
-.b7:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.b8{
-    width: 112%;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-}
-
-.b8:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.btn_4{
-    display: inline-block;
-}
-
-.b9{
-    width: 20%;
-    float: left;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin-left: 8.6rem;
-}
-
-.b9:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.b10{
-    width: 18%;
-    float: right;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin-right: 8.6rem;
-}
-
-.b10:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.btn_5{
-    display: inline-block;
-}
-
-.b11{
-    float: left;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-}
-
-.b11:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.b12{
-    float: right;
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-}
-
-.b12:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* .b1{
-   /* width: 93%; */
-
-/* 
-.buttonn1{
-/* margin: 6px; 
-width: 31% ;
-font-size: 10px;
-padding: 3vh;
+    padding: 3vh;
     color: var(--lime);
     justify-content: space-between;
     align-items: center;
     background-color: var(--background);
     border: 1px #3c3e4e solid;
-    border-radius: 15px;
-    font-family: 'Press Start 2P';
-    margin: 15px 6px; */
+    border-radius: 5px;
+}
 
-    /* font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
+
+.jobb_heading {
     color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    /* width: 33%; */
+    font-size: 18px;
+    padding-bottom: 22px;
+    padding-left: 75px;
+}
 
-/* 
-.buttonn1:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-} */
+.jobb_span {
+    color: var(--lime);
+    font-size: 18px;
+    padding-left: 90px;
+}
 
 
-
-/* .b2{
+.buttonn {
+    color: var(--lime);
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    row-gap: 2rem;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+    margin: 20px;
+}
 
-    gap: 10px;
-} */
-/* 
-.buttonn2{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem; 
-    color: #FFFF5C;
+
+.button-52 {
+    position: relative;
+    touch-action: manipulation;
+    padding: 2rem 2rem 1.5vh 2rem;
+    background-color: var(--lime);
+    font-size: 12px;
     color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
+    font-weight: 200;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    outline: 0;
+    border: 1px solid black;
     cursor: pointer;
-
-} */
-/* 
-.buttonn2:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-} */
-/* 
-.buttonn3{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-
-    text-align: center;
-    padding: 10px;
-} */
-
-/* .buttonn3:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.buttonn4{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-
-    text-align: center;
-    padding: 10px;
-} */
-/* 
-.buttonn4:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-} */
-
-
-/* .buttonn5{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-
-    text-align: center;
-    padding: 10px;
-} */
-
-/* .buttonn5:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-} */
-
-/* .buttonn6{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-
-    text-align: center;
-    padding: 10px;
-} */
-/* 
-.buttonn6:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
- */
-
-/* 
-.b3{
-    width: 93%;
-   padding-left: 320px;
-} */
-/* .buttonn7{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem; 
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    
-    margin: 30px; 
-} */
-/* 
-.buttonn7:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-} */
-
-
-
-/* .b4{
-
-   padding-left: 350px;
-}
-
-.buttonn8{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem; 
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-
-   
-}
-
-.buttonn8:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
+    position: relative;
+    z-index: 1;
 }
 
 
-
-.bb1{
-  
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex; 
-} */
-
-/* .b5{
-    
-    float: left;
-}
-
-
-.buttonn9{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem; 
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin: 30px; 
-    margin-left: 170px;
+.button-52:after {
+    content: "";
+    background-color: var(--background);
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+    border-radius: 5px;
+    border: 1px solid var(--lime);
 
 }
 
-.buttonn9:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
+.button-52:hover:after {
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+    border: 1px solid var(--lime);
 }
-
-.b6{
-    
-    float: right;
-    
-} */
-
-/* 
-.buttonn10{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    margin: 30px; 
-    margin-left: 70px;
-} */
-
-/* .buttonn10:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-
-.bb2{
-    width: 98vw;
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex; 
-} */
-
-/* .b7{
-
-    float: left;
-} */
-
-/* .buttonn11{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-}
-
-.buttonn11:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-}
-
-.b8{
-
-    float: left;
-    padding-left: 55px;
-} */
- 
-/*
-.buttonn12{
-    font-family: 'Press Start 2P';
-    font-size: 0.6em;
-    padding: 0.7rem;
-    color: #FFFF5C;
-    color: var(--lime);
-    background: var(--background);
-    border: 1px var(--bordercolor) solid;
-    cursor: pointer;
-    
-}
-
-.buttonn12:hover{
-    border: 0.7px var(--lime) solid;
-    cursor: pointer;
-} 
-*/
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .pg{
-    width: 50vw;
-    padding: 3vh;
-    padding-left: 330px;
-    padding-top: 130px;
-
-} */
