@@ -273,7 +273,7 @@
     /* border: 1px red solid; */
     width: 100%;
     text-align: center;
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
 }
 
 
@@ -289,7 +289,7 @@
     color: var(--lime);
     display: grid;
     row-gap: 2rem;
-    padding: 2rem 0rem 0 1rem;
+    padding: 2rem 0rem 0rem 1rem;
     /* padding-top: 50px; */
     padding-bottom: 40px;
     grid-template-columns: repeat(2,1fr);
@@ -302,7 +302,7 @@
 .b1 {
     position: relative;
     touch-action: manipulation;
-    padding: 1.8rem;
+    padding: 1.65rem;
     color: white;
     background-color: var(--lime);
     font-size: 12px;
