@@ -274,12 +274,7 @@
     font-size: 18px;
     padding-bottom: 22px;
     padding-left: 75px;
-}
-
-.jobb_span {
-    color: var(--lime);
-    font-size: 18px;
-    padding-left: 90px;
+    padding-top: 22px;
 }
 
 
@@ -287,15 +282,15 @@
     color: var(--lime);
     display: grid;
     row-gap: 2rem;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 40px;
     grid-template-columns: repeat(2,1fr);
-    gap: 25px;
-    margin: 20px;
+    row-gap: 50px;
+    column-gap: 40px;
 }
 
 
-.button-52 {
+.b1 {
     position: relative;
     touch-action: manipulation;
     padding: 2rem 2rem 1.5vh 2rem;
@@ -304,17 +299,18 @@
     color: var(--lime);
     font-weight: 200;
     letter-spacing: 1px;
-    border-radius: 5px;
     font-family: 'Press Start 2P', cursive;
     outline: 0;
     border: 1px solid black;
     cursor: pointer;
     position: relative;
     z-index: 1;
+
+    
 }
 
 
-.button-52:after {
+.b1:after {
     content: "";
     background-color: var(--background);
     width: 100%;
@@ -324,14 +320,14 @@
     top: 7px;
     left: 7px;
     transition: 0.2s;
-    border-radius: 5px;
     border: 1px solid var(--lime);
+    padding-bottom: 15px;
 
 }
 
-.button-52:hover:after {
+.b1:hover:after {
     top: 0px;
     left: 0px;
-    border-radius: 5px;
     border: 1px solid var(--lime);
+    text-align: center;
 }
