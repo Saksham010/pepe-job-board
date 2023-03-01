@@ -306,13 +306,13 @@ export default function Homepage() {
                 <div className="Box">
                     <div className="jobb">
                         <div className="container_1">
-                            <h1 className="jobb_heading">Check out other job portal.</h1>
+                            <h1 className="jobb_heading">Check out other job portals</h1>
                         </div>
                     </div>
 
 
                     <div className=" buttonn">
-                        <button name="workOS" className="b1" onClick={handleClick}>WorkOS</button>
+                        <button name="workOS" className="b1" onClick={handleClick}><p>WorkOS</p></button>
                         <button name="web3_Jobs" className="b1" onClick={handleClick}>web3 Jobs</button>
                         <button name="hustleverse" className="b1" onClick={handleClick}>Hustleverse</button>
                         <button name="Hunted" className="b1" onClick={handleClick}>Hunted</button>
