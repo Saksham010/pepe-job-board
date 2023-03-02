@@ -261,17 +261,17 @@ export default function Homepage() {
 
     const obj = {
         workOS: 'https://workos.com/?ref=ph_alternative&utm_campaign=ph2022&utm_medium=cpc&utm_source=producthunt',
-        web3_Jobs: 'https://www.producthunt.com/products/web3-jobs',
-        hustleverse: 'https://www.producthunt.com/products/hustleverse',
-        Hunted: 'https://www.producthunt.com/products/hunted',
+        web3_Jobs: 'https://web3.career/?ref=producthunt',
+        hustleverse: 'https://www.hustleverse.io/?ref=producthunt',
+        Hunted: 'https://huntd.tech/?ref=producthunt',
         job_hunt_stack: 'https://www.producthunt.com/products/job-hunt-stack',
         Web3_army: 'https://www.producthunt.com/products/web3-army',
-        Crypto_jobs_list: 'https://www.producthunt.com/products/cryptojobslist',
-        seaLaunch: 'https://www.producthunt.com/products/sealaunch',
-        Aworker: 'https://www.producthunt.com/products/aworker',
+        Crypto_jobs_list: 'https://cryptojobslist.com/?ref=producthunt',
+        seaLaunch: 'https://sealaunch.xyz/?ref=producthunt',
+        Aworker: 'https://aworker.io/?ref=producthunt',
         crypto_Jobs: 'https://www.producthunt.com/products/cryptojobs-2',
-        New_grad: 'https://www.producthunt.com/products/new-grad',
-        candena: 'https://www.producthunt.com/products/cadena',
+        New_grad: 'https://newgrad.ai/?ref=producthunt',
+        candena: 'https://cadena.dev/?ref=producthunt',
     }
 
 
