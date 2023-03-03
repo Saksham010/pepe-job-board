@@ -3,7 +3,16 @@ import {Routes,Route, } from "react-router-dom";
 import Navbar from './components/navbar/navbar';
 import Homepage from './components/homepage/homepage';
 import Form from './components/Form/Form';
+import ReactGA from 'react-ga4';
+import { useEffect } from 'react';
+const TRACKING_ID = "G-0CPPKXHV58"; // TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
+
 function App() {
+  useEffect(() => {
+    ReactGA.send("pageview");
+    // ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <div className="App">
       <Navbar/>
