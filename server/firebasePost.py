@@ -25,8 +25,8 @@ data = {
 # Data is scrapped
 
 # Upload to firebase cloud storage
-def uploadPicture():
-    picture = "files/darkhunter.png"
+def uploadPicture(picture):
+    # picture = "files/darkhunter.png"
     bucket = storage.bucket()
     blob = bucket.blob(picture)
     blob.upload_from_filename(picture)
