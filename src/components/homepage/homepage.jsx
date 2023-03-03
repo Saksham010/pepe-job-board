@@ -319,14 +319,14 @@ export default function Homepage() {
                         <button name="remote3" className="b1" onClick={handleClick}><p>Remote3</p></button>
                         <button name="web3_career" className="b1" onClick={handleClick}>Web3 Career</button>
                         <button name="web3_internship" className="b1" onClick={handleClick}>Web3 Internship</button>
-                        <button name=" Crypto_jobs_list" className="b1" onClick={handleClick}>Crypto Jobs List</button>
-                        <button name=" useweb3" className="b1" onClick={handleClick}> Use Web3</button>
+                        <button name="Crypto_jobs_list" className="b1" onClick={handleClick}>Crypto Jobs List</button>
+                        <button name="useweb3" className="b1" onClick={handleClick}> Use Web3</button>
                         <button name="cryptoJobs" className="b1" onClick={handleClick}>crypto Jobs</button>
                         <button name="CRCjobs" className="b1" onClick={handleClick}>CRC Jobs</button>
                         <button name="froog" className="b1" onClick={handleClick}>Froog</button>
                         <button name="productHouse" className="b1" onClick={handleClick}> Product House </button>
-                        <button name=" Gaby_job_board" className="b1" onClick={handleClick}>Gaby's JOb Board</button>
-                        <button name=" angelLiSt" className="b1" onClick={handleClick}>Angel List</button>
+                        <button name="Gaby_job_board" className="b1" onClick={handleClick}>Gaby's Job Board</button>
+                        <button name="angelLiSt" className="b1" onClick={handleClick}>Angel List</button>
                         <button name="jobster" className="b1" onClick={handleClick}>JObster</button>
                     </div>
                 </div>
