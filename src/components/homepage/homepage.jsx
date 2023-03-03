@@ -260,18 +260,18 @@ export default function Homepage() {
 
 
     const obj = {
-        workOS: 'https://workos.com/?ref=ph_alternative&utm_campaign=ph2022&utm_medium=cpc&utm_source=producthunt',
-        web3_Jobs: 'https://web3.career/?ref=producthunt',
-        hustleverse: 'https://www.hustleverse.io/?ref=producthunt',
-        Hunted: 'https://huntd.tech/?ref=producthunt',
-        job_hunt_stack: 'https://www.producthunt.com/products/job-hunt-stack',
-        Web3_army: 'https://www.producthunt.com/products/web3-army',
-        Crypto_jobs_list: 'https://cryptojobslist.com/?ref=producthunt',
-        seaLaunch: 'https://sealaunch.xyz/?ref=producthunt',
-        Aworker: 'https://aworker.io/?ref=producthunt',
-        crypto_Jobs: 'https://www.producthunt.com/products/cryptojobs-2',
-        New_grad: 'https://newgrad.ai/?ref=producthunt',
-        candena: 'https://cadena.dev/?ref=producthunt',
+        remote3: 'https://remote3.co/',
+        web3_career: ' https://web3.career/',
+        web3_internship: 'https://www.web3internships.com/',
+        Crypto_jobs_list: 'https://cryptojobslist.com/',
+        useweb3: ' https://www.useweb3.xyz/jobs',
+        cryptoJobs: 'https://www.cryptojobs.com/',
+        CRCjobs: 'https://cryptocurrencyjobs.com/',
+        froog: 'https://froog.co/',
+        productHouse: 'https://www.theproduct.house/earn/web3-jobs',
+        Gaby_job_board: 'https://web-3.pallet.com/jobs',
+        angelLiSt: 'https://angel.co/jobs',
+        jobster: 'https://cryptojobster.com/',
     }
 
 
@@ -312,18 +312,18 @@ export default function Homepage() {
 
 
                     <div className=" buttonn">
-                        <button name="workOS" className="b1" onClick={handleClick}><p>WorkOS</p></button>
-                        <button name="web3_Jobs" className="b1" onClick={handleClick}>web3 Jobs</button>
-                        <button name="hustleverse" className="b1" onClick={handleClick}>Hustleverse</button>
-                        <button name="Hunted" className="b1" onClick={handleClick}>Hunted</button>
-                        <button name=" Web3_army" className="b1" onClick={handleClick}> Web3 Army</button>
-                        <button name="Aworker" className="b1" onClick={handleClick}>Aworker</button>
-                        <button name="seaLaunch" className="b1" onClick={handleClick}>SeaLaunch</button>
-                        <button name="candena" className="b1" onClick={handleClick}>Candena</button>
-                        <button name=" crypto_Jobs" className="b1" onClick={handleClick}> Crypto Jobs</button>
-                        <button name="New_grad" className="b1" onClick={handleClick}>New Grad</button>
-                        <button name=" job_hunt_stack" className="b1" onClick={handleClick}> Job Hunt Stack</button>
-                        <button name="Crypto_jobs_list" className="b1" onClick={handleClick}>Crypto Jobs List</button>
+                        <button name="remote3" className="b1" onClick={handleClick}><p>Remote3</p></button>
+                        <button name="web3_career" className="b1" onClick={handleClick}>Web3 Career</button>
+                        <button name="web3_internship" className="b1" onClick={handleClick}>Web3 Internship</button>
+                        <button name=" Crypto_jobs_list" className="b1" onClick={handleClick}>Crypto Jobs List</button>
+                        <button name=" useweb3" className="b1" onClick={handleClick}> Use Web3</button>
+                        <button name="cryptoJobs" className="b1" onClick={handleClick}>crypto Jobs</button>
+                        <button name="CRCjobs" className="b1" onClick={handleClick}>CRC Jobs</button>
+                        <button name="froog" className="b1" onClick={handleClick}>Froog</button>
+                        <button name="productHouse" className="b1" onClick={handleClick}> Product House </button>
+                        <button name=" Gaby_job_board" className="b1" onClick={handleClick}>Gaby's JOb Board</button>
+                        <button name=" angelLiSt" className="b1" onClick={handleClick}>Angel List</button>
+                        <button name="jobster" className="b1" onClick={handleClick}>JObster</button>
                     </div>
                 </div>
                 :
