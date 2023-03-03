@@ -39,27 +39,21 @@ def uploadPicture():
     data["fileUrl"] = uploadedURL
 
 def uploadJob():
-    data.map
-
-# Upload to firebase cloud storage
-uploadPicture()
-
-
-print("Updated data: ",data)
-# collectionRef = firestore_client.collection("Job")
-# created_time, doc_ref = collectionRef.add({
-#     "name":"Saksham",
-#     "Type": "Testing"
-# })
-
-# print(f"{doc_ref} successfully created at {created_time}")
-
-# def postFile(url):
-
-
-# def postData():
-#     print("Hello")
-
-
-# Posting data to firebase
-# postData()
+    #Check if the data dictionary is empty
+    state = list(data.values())
+    for i in state:
+        if(i == '' or i == []):
+            raise Exception("The data is empty")
+    
+    #Upload the job data to firebase
+    collectionRef = firestore_client.collection("Job")
+    created_time, doc_ref = collectionRef.add(data)
+    print(f"{doc_ref} successfully created at {created_time}")
+        
+    
+try:
+    # Upload to firebase cloud storage
+    # uploadPicture()
+    uploadJob()
+except:
+    print("Upload failed .The data is not filled completely")
