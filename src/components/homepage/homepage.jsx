@@ -15,6 +15,10 @@ import { Link } from "react-router-dom";
 
 
 export default function Homepage() {
+        //Window size
+    const windowSize = useRef([window.innerWidth,window.innerHeight]);
+
+    console.log("Window width: ", windowSize.current[0]," Window height: ",windowSize.current[1]);
 
     const ref = useRef();
     //Content wise path
@@ -104,10 +108,10 @@ export default function Homepage() {
 
                         return (
                             <WinBox
-                                width={800}
-                                height={750}
-                                x={950}
-                                y={140}
+                                width={(44/100) * windowSize.current[0]}
+                                height={(80/100) * windowSize.current[1]}
+                                x={(50/100)*windowSize.current[0]}
+                                y={(20/100) * windowSize.current[1]}
                                 title={data.position}
                                 onClose={(event) => {
                                     handleClose(index);
