@@ -1,3 +1,6 @@
-# Web3 job board dedicated to intership
-  
-  Find remote pepe jobs
+RUN THE FOLLOWING COMMANDS TO SET THE ENVIRONMENT
+
+
+Clone the repo
+In root folder run npm install --legacy-peer-deps
+npm start
