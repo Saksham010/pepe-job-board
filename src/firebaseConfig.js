@@ -3,8 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
+// install dotenv and follow the line
+require('dotenv').config();
+console.log(process.env);
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAGrnRBIVo2cuIg7aeQvF0VCxgImC-Gkp4",
+  apiKey: process.env.API_KEY,
   authDomain: "remotepepejobs.firebaseapp.com",
   projectId: "remotepepejobs",
   storageBucket: "remotepepejobs.appspot.com",
